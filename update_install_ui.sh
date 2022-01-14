@@ -1,5 +1,4 @@
 #!/bin/sh
-
 echo ""
 echo "Updating APT and installing curl"
 apt update && apt install curl -y
