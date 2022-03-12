@@ -22,7 +22,11 @@ echo ""
 #echo ""
 
 echo "Clear NPM Cache"
-npm cache clean -f
+npm cache clean --force
+echo ""
+
+echo "Verifying NPM Cache"
+npm cache verify
 echo ""
 
 echo "Installing yarn package manager"
