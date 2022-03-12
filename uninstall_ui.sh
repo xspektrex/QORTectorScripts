@@ -3,7 +3,6 @@ echo "stopping node.js if running"
 killall -9 node
 echo ""
 
-cd UI
 cd qortal-ui
 echo "Removing previous package links..."
 yarn unlink qortal-ui-core
@@ -12,7 +11,7 @@ yarn unlink qortal-ui-plugins
 echo ""
 
 echo "Removing previous individual links..."
-cd ../qortal-ui-core
+cd qortal-ui-core
 # Break any previous links
 yarn unlink
 
@@ -20,7 +19,7 @@ cd ../qortal-ui-crypto
 # Break any previous links
 yarn unlink
 
-cd ../qortal-ui-plugins
+cd qortal-ui-plugins
 # Break any previous links
 yarn unlink
 echo ""
@@ -36,6 +35,8 @@ echo ""
 #echo "Removing qortal-ui-plugins package..."
 #yarn remove qortal-ui-plugins
 #echo ""
+
+cd ~
 
 echo "Removing Yarn..."
 npm uninstall -g yarn
@@ -57,9 +58,8 @@ apt autoremove
 apt purge
 echo ""
 
-cd ../..
 echo "Removing UI folder..."
-rm -R UI
+rm -R qortal-ui
 echo ""
 
 echo "UI has now been uninstalled, Goodbye!"

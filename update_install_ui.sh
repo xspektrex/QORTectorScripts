@@ -42,7 +42,7 @@ killall -9 node*
 echo ""
 
 echo "removing old files"
-rm -R UI
+rm -R qortal-ui
 echo ""
 
 echo "cloning git repositories for Qortal UI"
@@ -54,7 +54,7 @@ cd qortal-ui
 echo "installing dependencies and linking with yarn link for build process"
 yarn install
 
-cd ../qortal-ui-core
+cd qortal-ui-core
 
 yarn install
 # Break any previous links
@@ -68,7 +68,7 @@ yarn install
 yarn unlink
 yarn link
 
-cd ../qortal-ui-plugins
+cd qortal-ui-plugins
 
 yarn install
 # Break any previous links
