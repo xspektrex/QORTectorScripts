@@ -25,8 +25,8 @@ If no git version is listed simply install via terminal with `sudo apt install g
 2. Download scripts to your home folder via wget.
 
 ```
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/main/uninstall_ui.sh
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/main/update_install_ui.sh
+ wget https://github.com/xspektrex/QORTectorScripts/blob/master/update_install_ui.sh
+ wget https://github.com/xspektrex/QORTectorScripts/blob/master/uninstall_ui.sh
 ```
 
 2. Make the script/s executeable:
