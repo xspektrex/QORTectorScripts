@@ -4,12 +4,12 @@
 </h1>
 
 <p>
-Simple scripts to make tasks easier for users of the QORTectors and home built pi4's.  These scripts are 
-not be utilized on other linux systems unless explicitly indicated in the list below this body of text.
+Simple scripts to make tasks easier for users of the QORTectors and home built pi4's.  These scripts are
+not be utilized on other Linux systems unless explicitly indicated in the list below this body of text.
 </p>
 
 ```
-Appicable to other linux distros:
+Applicable to other linux distros:
 - unintall_ui.sh
 - update_install_ui.sh
 ```
@@ -25,16 +25,16 @@ If no git version is listed simply install via terminal with `sudo apt install g
 2. Download scripts to your home folder via wget.
 
 ```
- wget https://github.com/xspektrex/QORTectorScripts/blob/master/update_install_ui.sh
- wget https://github.com/xspektrex/QORTectorScripts/blob/master/uninstall_ui.sh
+ wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh
+ wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
 ```
 
-2. Make the script/s executeable:
+2. Make the script/s executable:
 
     via terminal, immediately after terminal load, with `chmod +x *.sh`
-    
-    Via GUI with `(Right-click -> Properties -> Permissions)` and check the "make executeable" box.
+
+    Via GUI with `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
 
 3. Now run the script/s:
 
-    via termianl, immediately after terminal load, with `sudo ./<script name with file extenstion> eg: sudo ./uninstall_ui.sh`
+    via terminal, immediately after terminal load, with `sudo ./<script name with file extension> eg: sudo ./uninstall_ui.sh`
