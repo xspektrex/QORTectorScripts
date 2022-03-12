@@ -46,7 +46,7 @@ rm -R UI
 echo ""
 
 echo "cloning git repositories for Qortal UI"
-git clone https://github.com/qortal/UI
+git clone https://github.com/Qortal/qortal-ui
 echo ""
 
 cd UI
