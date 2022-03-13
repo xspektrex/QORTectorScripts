@@ -72,14 +72,14 @@ yarn install
 yarn unlink
 yarn link
 
-cd qortal-ui-plugins
+cd ../qortal-ui-plugins
 
 yarn install
 # Break any previous links
 yarn unlink
 yarn link
 
-cd ../qortal-ui
+cd ../
 
 yarn link qortal-ui-core
 yarn link qortal-ui-crypto
