@@ -15,10 +15,12 @@ echo "Removing previous individual links..."
 cd ../qortal-ui-core
 # Break any previous links
 yarn unlink
+echo ""
 
 cd ../qortal-ui-crypto
 # Break any previous links
 yarn unlink
+echo ""
 
 cd ../qortal-ui-plugins
 # Break any previous links

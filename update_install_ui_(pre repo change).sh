@@ -58,6 +58,7 @@ cd qortal-ui
 
 echo "installing dependencies and linking with yarn link for build process"
 yarn install
+echo ""
 
 cd ../qortal-ui-core
 
@@ -65,6 +66,7 @@ yarn install
 # Break any previous links
 yarn unlink
 yarn link
+echo ""
 
 cd ../qortal-ui-crypto
 
@@ -72,6 +74,7 @@ yarn install
 # Break any previous links
 yarn unlink
 yarn link
+echo ""
 
 cd ../qortal-ui-plugins
 
@@ -79,12 +82,16 @@ yarn install
 # Break any previous links
 yarn unlink
 yarn link
+echo ""
 
 cd ../qortal-ui
 
 yarn link qortal-ui-core
+echo ""
 yarn link qortal-ui-crypto
+echo ""
 yarn link qortal-ui-plugins
+echo ""
 
 echo "starting build process...this may take a while...please be patient!"
 yarn run build
