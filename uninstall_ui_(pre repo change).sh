@@ -41,20 +41,43 @@ echo "Removing Yarn..."
 npm uninstall -g yarn
 echo ""
 
-echo "Removing Node's package manager 'n'..."
+echo "Removing any cached nodeJS versions..."
+n prune
+echo ""
+
+echo "Removing Node's version manager 'n' and nodeJS..."
 npm uninstall -g n
 echo ""
 
-echo "Removing NPM and node.JS ..."
-npm uninstall -g npm
+echo "Removing Node's package manager 'NPM'..."
+apt remove npm -y
+echo ""
+
+echo "Removing NodeJS..."
+apt remove nodejs -y
+echo ""
+
+echo "Cleaning up nodeJS remnants..."
+sudo rm -rf /usr/local/bin/npm
+sudo rm -rf /usr/local/share/man/man1/node*
+sudo rm -rf /usr/local/lib/dtrace/node.d
+rm -rf ~/.npm
+rm -rf ~/.node-gyp
+sudo rm -rf /opt/local/bin/node
+sudo rm -rf /opt/local/include/node
+sudo rm -rf /opt/local/lib/node_modules
+sudo rm -rf /usr/local/lib/node*
+sudo rm -rf /usr/local/include/node*
+sudo rm -rf /usr/local/bin/node*
+echo ""
 
 echo "Removing Curl..."
-apt remove curl
+apt remove curl -y
 echo ""
 
 echo "Cleaning up APT..."
-apt autoremove
-apt purge
+apt autoremove -y
+apt clean
 echo ""
 
 cd ../..
