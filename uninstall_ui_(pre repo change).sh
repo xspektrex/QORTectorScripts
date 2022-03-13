@@ -57,7 +57,11 @@ echo "Removing NodeJS..."
 apt remove nodejs -y
 echo ""
 
-echo "Cleaning up nodeJS remnants..."
+echo "Time to clean up nodeJS remnants..."
+sleep 1
+echo ""
+
+echo "Cleaning up straggling files and directories..."
 sudo rm -rf /usr/local/bin/npm
 sudo rm -rf /usr/local/share/man/man1/node*
 sudo rm -rf /usr/local/lib/dtrace/node.d
@@ -66,9 +70,23 @@ rm -rf ~/.node-gyp
 sudo rm -rf /opt/local/bin/node
 sudo rm -rf /opt/local/include/node
 sudo rm -rf /opt/local/lib/node_modules
+sudo rm -rf /usr/local/n
+sleep 1
+echo ""
+
+echo "Cleaning up installed modules..."
 sudo rm -rf /usr/local/lib/node*
+sleep 1
+echo ""
+
+echo "Cleaning up installed include modules..."
 sudo rm -rf /usr/local/include/node*
+sleep 1
+echo ""
+
+echo "Cleaning up files in local /bin..."
 sudo rm -rf /usr/local/bin/node*
+sleep 1
 echo ""
 
 echo "Removing Curl..."
