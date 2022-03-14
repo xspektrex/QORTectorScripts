@@ -1,18 +1,18 @@
 #!/bin/sh
 echo ""
-echo "Updating APT and installing curl"
+echo "Updating APT and installing curl..."
 apt update && apt install curl -y
 echo ""
 
-echo "stopping node.js if running"
+echo "Stopping node.js if running..."
 killall -9 node*
 echo ""
 
-echo "Installing NPM (Node Package Manager) if not already installed"
-apt install npm
+echo "Installing NPM (Node Package Manager) if not already installed..."
+apt install npm -y
 echo ""
 
-echo "NodeJS version if installed (or to be updated)"
+echo "NodeJS version if installed (or to be updated)..."
 node -v
 echo ""
 
@@ -21,42 +21,43 @@ echo ""
 #. ~/.profile
 #echo ""
 
-echo "Clear NPM Cache"
-npm cache clean --force
+echo "Clear NPM Cache..."
+npm cache clean -f
 echo ""
 
-echo "Verifying NPM Cache"
-npm cache verify
-echo ""
-
-echo "Installing yarn package manager"
+echo "Installing yarn package manager..."
 npm install -g yarn
 echo ""
 
-echo "Installing Node's version manager 'n'"
+echo "Installing Node's version manager 'n'..."
 npm install -g n
 echo ""
 
-echo "Installing most recent stable node.js release"
-sudo n stable
+echo "Installing most recent stable node.js release..."
+n latest
 echo ""
 
-echo "stopping node.js if running"
+echo "Pruning previous versions of nodeJS installed by 'n'..."
+n prune
+echo ""
+
+echo "Stopping node.js if running..."
 killall -9 node*
 echo ""
 
-echo "removing old files"
+echo "Removing old UI files"
 rm -R qortal-ui
 echo ""
 
-echo "cloning git repositories for Qortal UI"
-git clone https://github.com/Qortal/qortal-ui.git
+echo "Cloning git repositories for Qortal UI"
+git clone https://github.com/qortal/qortal-ui.git
 echo ""
 
 cd qortal-ui
 
-echo "installing dependencies and linking with yarn link for build process"
+echo "Installing dependencies and linking with yarn link for build process"
 yarn install
+echo ""
 
 cd qortal-ui-core
 
@@ -64,6 +65,7 @@ yarn install
 # Break any previous links
 yarn unlink
 yarn link
+echo ""
 
 cd ../qortal-ui-crypto
 
@@ -71,6 +73,7 @@ yarn install
 # Break any previous links
 yarn unlink
 yarn link
+echo ""
 
 cd ../qortal-ui-plugins
 
@@ -78,15 +81,22 @@ yarn install
 # Break any previous links
 yarn unlink
 yarn link
+echo ""
 
 cd ../
 
 yarn link qortal-ui-core
-yarn link qortal-ui-crypto
-yarn link qortal-ui-plugins
+echo ""
 
-echo "starting build process...this may take a while...please be patient!"
+yarn link qortal-ui-crypto
+echo ""
+
+yarn link qortal-ui-plugins
+echo ""
+
+echo "Starting build process...this may take a while...please be patient!"
 yarn run build
 echo ""
 
 echo "BUILD COMPLETE! You can now make use of the new UI!"
+echo ""
