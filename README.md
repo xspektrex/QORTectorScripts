@@ -9,7 +9,7 @@ not be utilized on other Linux systems unless explicitly indicated in the list b
 </p>
 
 ```
-Applicable to other linux distros:
+Applicable to other linux distros that are Qortal nodes only:
 - unintall_ui.sh
 - update_install_ui.sh
 ```
@@ -38,3 +38,17 @@ If no git version is listed simply install via terminal with `sudo apt install g
 3. Now run the script/s:
 
     via terminal, immediately after terminal load, with `sudo ./<script name with file extension> eg: sudo ./uninstall_ui.sh`
+
+---
+    
+Important Details:
+
+1. Since the UI repo has changed from "UI" to "qortal-ui" there are now 2 sets of scripts.
+
+```
+    - Pre repo change prefixed with "prc"
+    - Post repo change prefixed with nothing
+```
+    
+2.  If a clean install is preferred, and it is suggested, the pre repo change uninstaller should be utilized before utilizing the post repo change installer.
+
