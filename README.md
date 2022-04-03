@@ -22,26 +22,34 @@ To Utilize:
 1. Ensure `git` is installed with terminal command `git --version`.  
 If no git version is listed simply install via terminal with `sudo apt install git` and proceed.
 
-2. Download scripts to your home folder via wget.
+2. Download removal & update scripts to your home folder via wget:
 
 ```
  wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh
  wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
+```
+
+3. Download Core & UI launchers via wget:
+
+```
  wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/launch_Core.sh (move to desktop)
  wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/launch_UI.sh (move to desktop)
 ```
 
-2. Make the script/s executable:
+4. Make the script/s executable:
 
     via terminal, immediately after terminal load, with `chmod +x *.sh`
 
     Via GUI with `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
 
-3. Now run the script/s:
+5. Cut/paste Core & UI launchers to desktop
 
-    via terminal, immediately after terminal load, with `sudo ./<script name with file extension> eg: sudo ./uninstall_ui.sh`
+6. Now run the update_install or uninstall script/s via termianl:
+
+    `sudo ./<script name with file extension> eg: sudo ./uninstall_ui.sh`
 
 ---
+    
     
 Important Details:
 
