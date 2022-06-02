@@ -32,8 +32,8 @@ If no git version is listed simply install via terminal with `sudo apt install g
 3. Download Core & UI launchers via wget:
 
 ```
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/launch_Core.sh (move to desktop)
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/launch_UI.sh (move to desktop)
+ wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_Core.sh (move to desktop)
+ wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_UI.sh (move to desktop)
 ```
 
 4. Make the script/s executable:
