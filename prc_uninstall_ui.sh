@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "stopping node.js if running"
+echo "stopping node.js if running..."
 killall -9 node
 echo ""
 
@@ -100,7 +100,6 @@ apt autoremove -y
 apt clean
 echo ""
 
-cd ../..
 echo "Removing UI folder..."
 rm -R UI
 echo ""
