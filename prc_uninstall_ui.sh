@@ -39,6 +39,8 @@ echo ""
 #yarn remove qortal-ui-plugins
 #echo ""
 
+cd ../..
+
 echo "Removing Yarn..."
 npm uninstall -g yarn
 echo ""
