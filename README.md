@@ -1,6 +1,6 @@
 
 <h1 align="center">
-~QORTector Scripts~
+~QORTector Scripts (Currently not working and under revision!!!)~
 </h1>
 
 <p>
