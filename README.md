@@ -57,7 +57,7 @@ Important Details (2023):
 ```
     - Post 2023 repo change scripts prefixed with nothing
     - Pre 2023 repo change scripts prefixed with "prc2023"
-    <strike>- Pre 2022 repo change scripts prefixed with "prc2022" </strike> (Deprecated)
+    - <strike>Pre 2022 repo change scripts prefixed with "prc2022" </strike> (Deprecated)
 ```
 
 2.  If a clean install is preferred, and it is suggested, the following must be donepre2023 repo change uninstaller should be utilized before utilizing the update_install installer.
