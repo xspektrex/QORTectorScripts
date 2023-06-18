@@ -25,15 +25,15 @@ If no git version is listed simply install via terminal with `sudo apt install g
 2. Download removal & update scripts to your home folder via wget:
 
 ```
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
+     wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh
+     wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
 ```
 
 3. Download Core & UI launchers via wget:
 
 ```
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_Core.sh (move to desktop)
- wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_UI.sh (move to desktop)
+     wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_Core.sh (move to desktop)
+     wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_UI.sh (move to desktop)
 ```
 
 4. Make the script/s executable:
