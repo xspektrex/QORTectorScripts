@@ -1,6 +1,6 @@
 
 <h1 align="center">
-~QORTector Scripts (Currently not working and under revision!!!)~
+~QORTector Scripts (Updated!!!)~
 </h1>
 
 <p>
@@ -49,9 +49,19 @@ If no git version is listed simply install via terminal with `sudo apt install g
     `sudo ./<script name with file extension> eg: sudo ./uninstall_ui.sh`
 
 ---
+
+Important Details (2023):
+
+1. Since the qortal-ui repo has been restructured there are now 3 sets of scripts.
+
+```
+    - Post 2023 repo change scripts prefixed with nothing
+    - Pre 2023 repo change scripts prefixed with "prc2023"
+    - Pre 2022 repo change scripts prefixed with "prc2022" (Deprecated)
+```
+---
     
-    
-Important Details:
+<strike>Important Details (2022):
 
 1. Since the UI repo has changed from "UI" to "qortal-ui" there are now 2 sets of scripts.
 
@@ -60,5 +70,5 @@ Important Details:
     - Post repo change prefixed with nothing
 ```
     
-2.  If a clean install is preferred, and it is suggested, the pre repo change uninstaller should be utilized before utilizing the post repo change installer.
+2.  If a clean install is preferred, and it is suggested, the pre repo change uninstaller should be utilized before utilizing the post repo change installer.</strike>
 
