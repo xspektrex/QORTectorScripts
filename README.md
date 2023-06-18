@@ -57,15 +57,22 @@ Important Details (2023):
 ```
     - Post 2023 repo change scripts prefixed with nothing
     - Pre 2023 repo change scripts prefixed with "prc2023"
-    - <strike>Pre 2022 repo change scripts prefixed with "prc2022" </strike> (Deprecated)
 ```
 
-2.  If a clean install is preferred, and it is suggested, the following must be donepre2023 repo change uninstaller should be utilized before utilizing the update_install installer.
-    - Run the prc2023unintall_ui.sh script to remove the qortal-ui install that was previously the normal installer
-    - Run the update_install_ui.sh script to install the qortal-ui
+2.  If a clean install is preferred, and it is suggested, the following procedural flow must be followed based on the indicated situation
+    - If doing a fresh install
+       ```
+          Run the update_install_ui.sh script
+       ```
+      
+    - If updating for the first time since the repo re-orginization
+        ```
+            Run the prc2023unintall_ui.sh script to remove the qortal-ui install that was previously the normal installer
+            Run the update_install_ui.sh script to install the qortal-ui
+        ```
 ---
     
-<strike>Important Details (2022):
+<strike>Important Details (2022) (Deprecated):
 
 1. Since the UI repo has changed from "UI" to "qortal-ui" there are now 2 sets of scripts.
 
