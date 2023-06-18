@@ -52,13 +52,17 @@ If no git version is listed simply install via terminal with `sudo apt install g
 
 Important Details (2023):
 
-1. Since the qortal-ui repo has been restructured there are now 3 sets of scripts.
+1. Since the qortal-ui repo has been restructured there are now 2 sets of scripts.
 
 ```
     - Post 2023 repo change scripts prefixed with nothing
     - Pre 2023 repo change scripts prefixed with "prc2023"
-    - Pre 2022 repo change scripts prefixed with "prc2022" (Deprecated)
+    <strike>- Pre 2022 repo change scripts prefixed with "prc2022" </strike> (Deprecated)
 ```
+
+2.  If a clean install is preferred, and it is suggested, the following must be donepre2023 repo change uninstaller should be utilized before utilizing the update_install installer.
+    - Run the prc2023unintall_ui.sh script to remove the qortal-ui install that was previously the normal installer
+    - Run the update_install_ui.sh script to install the qortal-ui
 ---
     
 <strike>Important Details (2022):
