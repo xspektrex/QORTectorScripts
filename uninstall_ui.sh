@@ -41,7 +41,7 @@ if [ "$_user" = "root" ]; then
 	sleep 2
 	echo ""
 
-	# exit under general error
+	# Exit under general error
 	exit 1
 	
 elif [ "$SUDO_USER" != "" ]; then
@@ -51,7 +51,7 @@ elif [ "$SUDO_USER" != "" ]; then
 	sleep 2
 	echo ""
 
-	# exit under general error
+	# Exit under general error
 	exit 1
 	
 elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
@@ -69,7 +69,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     sleep 4
     echo ""
 
-    # disable mouse cursor
+    # Disable mouse cursor
     tput civis
 
     echo "${green}Starting${normal} Qortal-UI removal via npm which may take a while...please be patient!"
@@ -82,7 +82,6 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     # Uninstall and remove qortal-ui modules via npm
     echo "${red}Uninstalling${normal} Qortal-UI via npm..."
     cd qortal-ui
-    #sudo -u $(id -u -n) 
     sudo npm uninstall qortal-ui
     sudo npm rm qortal-ui
     cd ..
@@ -114,7 +113,8 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     echo ""
 
     echo "${green}Qortal-UI has now been uninstalled, Goodbye!${normal}"
-    # re-enable mouse cursor
+	
+    # Re-enable mouse cursor
     tput cnorm
     
     # Read user typed key into "input" and return after reading 1 character (-n 1) without echoing to the term (-s)
