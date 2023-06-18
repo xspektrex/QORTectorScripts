@@ -9,12 +9,11 @@ not be utilized on other Linux systems unless explicitly indicated in the list b
 </p>
 
 ```
-Applicable to other linux distros that are Qortal nodes only:
-- unintall_ui.sh
-- update_install_ui.sh
+    Applicable to other linux distros that are Qortal nodes only:
+      - unintall_ui.sh
+      - update_install_ui.sh
 ```
 ---
-
 
 
 To Utilize:
