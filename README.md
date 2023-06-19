@@ -61,11 +61,13 @@ Important Details (2023):
 2.  If a clean install is preferred, and it is suggested, the following procedural flow must be followed based on the indicated situation
     - If doing a fresh install
        ```
+          Ensure nodeJS is not already installed via APT as it will not be an LTS release
           Run the update_install_ui.sh script
        ```
       
     - If updating for the first time since the repo re-orginization
         ```
+            Ensure nodeJS is not already installed via APT as it will not be an LTS release
             Run the prc2023unintall_ui.sh script to remove the qortal-ui install that was previously the normal installer
             Run the update_install_ui.sh script to install the qortal-ui
         ```
