@@ -22,14 +22,12 @@ To Utilize:
 If no git version is listed simply install via terminal with `sudo apt install git` and proceed.
 
 2. Download removal & update scripts to your home folder via wget:
-
 ```
      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh
      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
 ```
 
 3. Download Core & UI launchers via wget:
-
 ```
      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_Core.sh (move to desktop)
      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_UI.sh (move to desktop)
@@ -37,15 +35,16 @@ If no git version is listed simply install via terminal with `sudo apt install g
 
 4. Make the script/s executable:
 
-    via terminal, immediately after terminal load, with `chmod +x *.sh`
+    via terminal, immediately after terminal load, with  `chmod +x *.sh`
 
-    Via GUI with `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
+    Via GUI with  `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
 
-5. Cut/paste Core & UI launchers to desktop
+6. Cut/paste Core & UI launchers to desktop
 
-6. Now run the update_install or uninstall script/s via termianl:
-
-    `sudo ./<script name with file extension> eg: sudo ./uninstall_ui.sh`
+7. Now run the update_install or uninstall script/s via termianl:
+   ```
+   sudo ./<script name with file extension> eg: sudo ./uninstall_ui.sh
+   ```
 
 ---
 
@@ -59,24 +58,25 @@ Important Details (2023):
 ```
 
 2.  If a clean install is preferred, and it is suggested, the following procedural flow must be followed based on the indicated situation
-    - If doing a fresh install
-       ```
-           Ensure nodeJS is not already installed via APT as it will not be an LTS release
-              - Sudo apt purge nodeJS
-           Run the update_install_ui.sh script
-       ```
+    - If doing a fresh install 
+        - Ensure nodeJS is not already installed via APT as it will not be an LTS release
+           ```
+               Sudo apt purge nodeJS
+           ```
       
     - If updating for the first time since the repo re-orginization
-        ```
-            Ensure nodeJS is not already installed via APT as it will not be an LTS release
-                - Sudo apt purge nodeJS
-            Run the prc2023unintall_ui.sh script to remove the qortal-ui install that was previously the normal installer
-            Run the update_install_ui.sh script to install the qortal-ui
-        ```
+        - Ensure nodeJS is not already installed via APT as it will not be an LTS release
+              ```
+                Sudo apt purge nodeJS
+              ```
+        - Run the `prc2023unintall_ui.sh` script to remove the qortal-ui install that was previously the normal installer
+        - Run the `update_install_ui.sh` script to install the qortal-ui
+        
 3. Finish up by re-installing curl
-       
+   
            sudo apt install curl
-       
+
+
     
 <strike>Important Details (2022) (Deprecated):
 
