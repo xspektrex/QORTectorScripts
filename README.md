@@ -73,7 +73,12 @@ Important Details (2023):
             Run the prc2023unintall_ui.sh script to remove the qortal-ui install that was previously the normal installer
             Run the update_install_ui.sh script to install the qortal-ui
         ```
----
+3. Finish up
+   - Re-install curl
+     
+       ```
+           - sudo apt install curl
+       ```
     
 <strike>Important Details (2022) (Deprecated):
 
