@@ -106,10 +106,8 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
   sudo apt install ufw
     - configure firewall
         sudo ufw allow openssh
-        sudo ufw allow 12391/tcp
         sudo ufw allow 12392/tcp
-        sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 80 proto tcp
-        sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 8080 proto tcp
+        sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 12391 proto tcp
         sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 12388 proto tcp
     - additional firewall commands
       -- list/remove (v6) ufw entries if needed
