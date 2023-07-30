@@ -1,5 +1,5 @@
 <h1 align="center">
-~ Qortal/VPS install/setup Directions ~
+~ VPS setup/config and Qortal node install/setup Directions ~
 </h1>
 
 <p>
@@ -144,4 +144,58 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 23.) Start the core
 ```
 ./start.sh
+```
+
+---
+<h1 align="center">
+~ Load UI from MAC/Linux and connect with VPS/core installation ~
+</h1>
+This portion of the guide assumes you have already downloaded/installed the UI locally
+
+If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/tag/latest
+
+1.) Load the terminal and type (this must be done every time!!!)
+```
+  ssh -L 12391:localhost:12391 <username@IP of VPS>
+```
+2.) Load UI and enjoy
+
+3.) When done with UI
+```
+  Exit the UI via the exit button
+  Exit the ssh session by typing in "exit"
+  Exit the terminal session by typing in "exit"
+```
+
+
+
+---
+<h1 align="center">
+~ Load UI from Windows and connect with VPS/core installation ~
+</h1>
+This portion of the guide assumes you have already downloaded/installed the UI locally
+
+If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/tag/latest
+  
+1.) Download putty from https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.78-installer.msi and install/load
+```
+  When application loads "Session" will be highlighted in the Category tree on the left
+  Populate the "Host Name (or IP address)" field on the right of the window with the IP from the VPS only
+  In the left "Category" tree click "SSH" to expand it's tree
+  In the left "Category" tree click "Tunnels"
+  On the right of the window populate the "Source port" text field with "12391" only
+  On the right of the window populate the "Destination" text field with <IP of VPS>:12391 only
+  On the right of the window click the "Add" button only
+  On the left of the winow scroll up and click "Session" to get back to where we were in the beginning
+  On the right of the screen the previously entered "Host Name" field should still be populated (this is good!)
+  On the right of the screen populate "Saved Sessions" with a name you see fit
+  On the right of the screen click "Save" and all the entries we just made will be stored under the session name you chose
+```
+2.) Before loading the UI locally, moving forward, the following must be done every time!!!
+```
+  Load putty
+  On the right of the window select/click the previously entered/saved session name
+  On the right of the window click "load"
+  On the right of the screen click "open"
+  An ssh window will open and request the username/password of the account you would like to login with on the VPS server
 ```
