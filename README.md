@@ -1,10 +1,10 @@
 
 <h1 align="center">
-~QORTector Scripts and howto's (Updated!!!)~
+~QORTector Scripts and how to's (Updated!!!)~
 </h1>
 
 <p>
-Simple scripts and howto's to make tasks easier for users of the QORTectors and home built pi4's and linux.
+Simple scripts and how to's to make tasks easier for users of the QORTectors and home built pi4's and linux.
 The scripts herein are not be utilized on other Linux systems unless explicitly indicated in the list below this body of text.
 </p>
 
