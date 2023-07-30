@@ -131,7 +131,7 @@ Easy to follow quide on setting up a VPS and installing qortal core (headles ins
   echo -en "{\n\"bindAddress\": \"0.0.0.0\",\n\"apiDocumentationEnabled\": true,\n\"apiEnabled\": true,\n\"apiRestricted\": false,\n\"apiWhitelistEnabled\": false\n}" > settings.json
 ```
 
-22.) Install tools
+22.) Install tools to make it easier to get quick stats for core
 ```
   https://raw.githubusercontent.com/Qortal/qortal/master/tools/qort && chmod +x qort
   https://raw.githubusercontent.com/Qortal/qortal/master/tools/peer-heights && chmod +x peer-heights
