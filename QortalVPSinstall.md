@@ -105,16 +105,16 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 ```
   sudo apt install ufw
     - configure firewall
-      -- sudo ufw allow openssh
-      -- sudo ufw allow 12391/tcp
-      -- sudo ufw allow 12392/tcp
-      -- sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 80 proto tcp
-      -- sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 8080 proto tcp
-      -- sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 12388 proto tcp
+        sudo ufw allow openssh
+        sudo ufw allow 12391/tcp
+        sudo ufw allow 12392/tcp
+        sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 80 proto tcp
+        sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 8080 proto tcp
+        sudo ufw allow from 127.0.0.1 to 127.0.0.1 port 12388 proto tcp
     - additional firewall commands
       -- list/remove (v6) ufw entries if needed
-        --- sudo ufw status numbered verbose
-        --- sudo ufw remove {listed number}
+          sudo ufw status numbered verbose
+          sudo ufw remove {listed number}
 ```
 
 20.) Install qortal core
@@ -138,10 +138,10 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
   https://raw.githubusercontent.com/Qortal/qortal/master/tools/peer-heights && chmod +x peer-heights
   sudo cp qort /usr/local/bin
     - useful commands
-      -- ./qort -p peers
-      -- ./qort -p admin/status
-      -- ./qort -p admin/info
-      -- ./qort -p admin/mintingaccounts
+        ./qort -p peers
+        ./qort -p admin/status
+        ./qort -p admin/info
+        ./qort -p admin/mintingaccounts
 ```
 23.) Start the core
 ```
