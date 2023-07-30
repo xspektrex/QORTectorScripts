@@ -3,7 +3,7 @@
 </h1>
 
 <p>
-Easy to follow quide on setting up a VPS and installing qortal core (headles install ubuntu/debian based distros)
+Easy to follow quide on setting up a VPS hosted node and installing qortal core (headles install ubuntu/debian based distros)
 </p>
 
 ---
