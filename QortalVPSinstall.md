@@ -22,7 +22,7 @@ Easy to follow quide on setting up a VPS and installing qortal core (headles ins
 
 3.) change user account to bash (terminal)
 ```
-  sudo chsh -s /bin/bash ${username}
+  sudo chsh -s /bin/bash <username>
 ```
 
 4.) log out of root and login to <username> created previously
