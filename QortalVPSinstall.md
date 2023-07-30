@@ -8,24 +8,24 @@ Easy to follow quide on setting up a VPS and installing qortal core (headles ins
 
 ---
 
-1.) Add non root user
+1.) Add non root user for all future work (Never use root!!!)
 ```
   useradd -m <username> (-m creates the home directory)
   passwd <username>
 ```
 
-2.) Install sudo as root and apply to <username>
+2.) Install sudo as root and apply to new user
 ```
   apt install sudo
   usermod -aG sudo admin (allows <username> to issue sudo commands)
 ```
 
-3.) Change user account to bash (terminal)
+3.) Change user account to bash for new user
 ```
   chsh -s /bin/bash <username>
 ```
 
-4.) Log out of root and log in with previously created username
+4.) Log out of root and log in with new user
 
 5.) Fix .profile for new user
 ```
