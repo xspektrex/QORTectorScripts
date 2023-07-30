@@ -131,11 +131,12 @@ Easy to follow quide on setting up a VPS and installing qortal core (headles ins
   echo -en "{\n\"bindAddress\": \"0.0.0.0\",\n\"apiDocumentationEnabled\": true,\n\"apiEnabled\": true,\n\"apiRestricted\": false,\n\"apiWhitelistEnabled\": false\n}" > settings.json
 ```
 
-22.) Install tools to make it easier to get quick stats for core
+22.) Install tools to make it easier to get quick stats for core (tools called from home directory prefixed with ./)
 ```
+  cd
   https://raw.githubusercontent.com/Qortal/qortal/master/tools/qort && chmod +x qort
   https://raw.githubusercontent.com/Qortal/qortal/master/tools/peer-heights && chmod +x peer-heights
-  cd && sudo cp qort /usr/local/bin
+  sudo cp qort /usr/local/bin
     - useful commands
       -- ./qort -p peers
       -- ./qort -p admin/status
