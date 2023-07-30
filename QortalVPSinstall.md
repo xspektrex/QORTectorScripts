@@ -17,7 +17,7 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 2.) Install sudo as root and apply to new user
 ```
   apt install sudo
-  usermod -aG sudo admin (allows <username> to issue sudo commands)
+  usermod -aG sudo <username> (allows <username> to issue sudo commands)
 ```
 
 3.) Change user account to bash for new user
