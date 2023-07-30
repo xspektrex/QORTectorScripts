@@ -20,7 +20,7 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
   usermod -aG sudo <username> (allows <username> to issue sudo commands)
 ```
 
-3.) Change user account to bash for new user
+3.) Change shell to bash for new user
 ```
   chsh -s /bin/bash <username>
 ```
