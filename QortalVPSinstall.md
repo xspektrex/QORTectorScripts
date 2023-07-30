@@ -1,12 +1,12 @@
 <h1 align="center">
 ~ VPS setup/config and Qortal node install/setup Directions ~
 </h1>
-
-<p>
+<br>
+<p align="center">
 Easy to follow quide on setting up a VPS hosted node and installing qortal core (headles install ubuntu/debian based distros)
 </p>
+<br>
 
----
 
 1.) Add non root user for all future work (Never use root!!!)
 ```
@@ -143,16 +143,19 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 ```
 23.) Start the core
 ```
-./start.sh
+  ./start.sh
 ```
-
 ---
+<br></br>
+
 <h1 align="center">
 ~ Load UI from MAC/Linux and connect with VPS/core installation ~
 </h1>
-This portion of the guide assumes you have already downloaded/installed the UI locally
-
+<p align="center">
+This portion of the guide assumes you have already downloaded/installed the UI locally!
 If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/tag/latest
+</p>
+<br>
 
 1.) Load the terminal and type (this must be done every time!!!)
 ```
@@ -163,19 +166,20 @@ If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/ta
 3.) When done with UI
 ```
   Exit the UI via the exit button
-  Exit the ssh session by typing in "exit"
-  Exit the terminal session by typing in "exit"
+  Exit the ssh session by typing in "exit" and hitting enter
+  Exit the terminal session by typing in "exit" and hitting enter
 ```
-
-
-
 ---
+<br></br>
+
 <h1 align="center">
 ~ Load UI from Windows and connect with VPS/core installation ~
 </h1>
+<p align="center">
 This portion of the guide assumes you have already downloaded/installed the UI locally
-
 If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/tag/latest
+</p>
+<br>
   
 1.) Download putty from https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.78-installer.msi and install/load
 ```
@@ -197,5 +201,14 @@ If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/ta
   On the right of the window select/click the previously entered/saved session name
   On the right of the window click "load"
   On the right of the screen click "open"
-  An ssh window will open and request the username/password of the account you would like to login with on the VPS server
+  An ssh window will open allowing you to login to the VPS instance via bash/shell
+  Login with non-root username created earlier in this document
+  Minimize window
+```
+3.) Load UI and enjoy
+
+4.) When done with UI
+```
+  Exit the UI via the exit button
+  Exit the ssh/putty session by typing in "exit" and hitting enter which will close the terminal session and putty
 ```
