@@ -143,7 +143,7 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 ```
 23.) Start the core
 ```
-  ./start.sh
+  cd qortal && ./start.sh
 ```
 ---
 <br></br>
