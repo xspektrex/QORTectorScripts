@@ -120,7 +120,8 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
   wget https://github.com/Qortal/qortal/releases/latest/download/qortal.zip
   unzip qortal.zip            
   cd qortal         
-  chmod +x *.sh   
+  chmod +x *.sh
+  rm -rf qortal.zip
 ```
 
 21.) Fix settings.json for core on VPS
