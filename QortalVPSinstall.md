@@ -78,7 +78,7 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 
 14.) Install rfkill (command line tool for controlling network adapters)
 ```
-  sudo apt rfkill
+  sudo apt install rfkill
 ```
 
 15.) Install unzip utility (command line tool for unzipping archives)
