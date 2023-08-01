@@ -133,8 +133,8 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 22.) Install tools to make it easier to get quick stats for core (tools called from home directory prefixed with ./)
 ```
   cd
-  https://raw.githubusercontent.com/Qortal/qortal/master/tools/qort && chmod +x qort
-  https://raw.githubusercontent.com/Qortal/qortal/master/tools/peer-heights && chmod +x peer-heights
+  wget https://raw.githubusercontent.com/Qortal/qortal/master/tools/qort && chmod +x qort
+  wget https://raw.githubusercontent.com/Qortal/qortal/master/tools/peer-heights && chmod +x peer-heights
   sudo cp qort /usr/local/bin
     - useful commands
         ./qort -p peers
