@@ -188,13 +188,15 @@ If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/ta
   Populate the "Host Name (or IP address)" field on the right of the window with the IP from the VPS only
   In the left "Category" tree click "SSH" to expand it's tree
   In the left "Category" tree click "Tunnels"
-  On the right of the window populate the "Source port" text field with "12391" only
-  On the right of the window populate the "Destination" text field with <IP of VPS>:12391 only
-  On the right of the window click the "Add" button only
-  On the left of the winow scroll up and click "Session" to get back to where we were in the beginning
-  On the right of the screen the previously entered "Host Name" field should still be populated (this is good!)
-  On the right of the screen populate "Saved Sessions" with a name you see fit
-  On the right of the screen click "Save" and all the entries we just made will be stored under the session name you chose
+    On the right of the window populate the "Source port" text field with "12391" only
+    On the right of the window populate the "Destination" text field with <IP of VPS>:12391 only
+    On the right of the window click the "Add" button only
+  In the left "Category" tree click "Connection"
+    On the right of the window populate the "Seconds between keepalives" text field with "60"
+  In the left "Category" tree scroll up and click "Session" to get back to where we were in the beginning
+    On the right of the screen the previously entered "Host Name" field should still be populated (this is good!)
+    On the right of the screen populate "Saved Sessions" with a name you see fit
+    On the right of the screen click "Save" and all the entries we just made will be stored under the session name you chose (this is good!)
 ```
 2.) Before loading the UI locally, moving forward, the following must be done every time!!!
 ```
