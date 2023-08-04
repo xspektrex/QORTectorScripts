@@ -208,7 +208,12 @@ If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/ta
   Login with non-root username created earlier in this document
   Minimize window
 ```
-3.) Load UI and enjoy
+3.) Load UI
+```
+  When prompted for apikey put the following in terminal to get it
+  cat qortal/apikey.txt
+  copy the key in black/white and paste into the UI apikey text box
+```
 
 4.) When done with UI
 ```
