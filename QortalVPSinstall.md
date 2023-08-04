@@ -211,7 +211,7 @@ If not it can be downloaded from https://github.com/Qortal/qortal-ui/releases/ta
 3.) Load UI
 ```
   When prompted for apikey put the following in terminal to get it
-  cat qortal/apikey.txt
+  cat qortal/apikey.txt ; echo
   copy the key in black/white and paste into the UI apikey text box
 ```
 
