@@ -78,8 +78,7 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
 
 14.) Install glances (terminal based, interactive resource monitor a bit more informative than htop)
 ```
-  sudo apt install python3 python3-dev python3-jinja2 python3-psutil python3-setuptools hddtemp python3-pip lm-sensors
-sudo pip3 install glances
+  curl -L https://bit.ly/glances | /bin/bash
 ```
 
 15.) Install nethogs (terminal based, network tx/rx realtime display (has to be launched via sudo))
