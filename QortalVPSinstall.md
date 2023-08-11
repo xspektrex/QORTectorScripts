@@ -76,32 +76,43 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
   sudo apt install htop
 ```
 
-14.) Install rfkill (command line tool for controlling network adapters)
+14.) Install glances (terminal based, interactive resource monitor a bit more informative than htop)
+```
+  sudo apt install python3 python3-dev python3-jinja2 python3-psutil python3-setuptools hddtemp python3-pip lm-sensors
+sudo pip3 install glances
+```
+
+15.) Install nethogs (terminal based, network tx/rx realtime display (has to be launched via sudo))
+```
+  sudo apt install nethogs
+```
+
+16.) Install rfkill (command line tool for controlling network adapters)
 ```
   sudo apt install rfkill
 ```
 
-15.) Install unzip utility (command line tool for unzipping archives)
+17.) Install unzip utility (command line tool for unzipping archives)
 ```
   sudo apt install unzip
 ```
 
-16.) Install 7-zip (command line tool for zipping/unzipping archives)
+18.) Install 7-zip (command line tool for zipping/unzipping archives)
 ```
   sudo apt install p7zip-full
 ```
 
-17.) Install bc (command line tool for calculations)
+19.) Install bc (command line tool for calculations)
 ```
   sudo apt install bc
 ```
 
-18.) Install java
+20.) Install java
 ```
   sudo apt install openjdk-17-jdk openjdk-17-jdk-headless
 ```
 
-19.) Install ufw firewall
+21.) Install ufw firewall
 ```
   sudo apt install ufw
     - configure firewall
@@ -115,7 +126,7 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
           sudo ufw remove {listed number}
 ```
 
-20.) Install qortal core
+22.) Install qortal core
 ```
   wget https://github.com/Qortal/qortal/releases/latest/download/qortal.zip
   unzip qortal.zip            
@@ -124,13 +135,13 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
   rm -rf qortal.zip
 ```
 
-21.) Fix settings.json for core on VPS
+23.) Fix settings.json for core on VPS
 ```
   rm -rf settings.json
   echo -en "{\n\"bindAddress\": \"0.0.0.0\",\n\"apiDocumentationEnabled\": true,\n\"apiEnabled\": true,\n\"apiRestricted\": false,\n\"apiWhitelistEnabled\": false\n}" > settings.json
 ```
 
-22.) Install tools to make it easier to get quick stats for core (tools called from home directory prefixed with ./)
+24.) Install tools to make it easier to get quick stats for core (tools called from home directory prefixed with ./)
 ```
   cd
   wget https://raw.githubusercontent.com/Qortal/qortal/master/tools/qort && chmod +x qort
@@ -142,7 +153,7 @@ Easy to follow quide on setting up a VPS hosted node and installing qortal core 
         ./qort -p admin/info
         ./qort -p admin/mintingaccounts
 ```
-23.) Start the core
+25.) Start the core
 ```
   cd qortal && ./start.sh
 ```
