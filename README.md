@@ -86,6 +86,7 @@ The scripts herein are not to be utilized on other Linux systems unless explicit
              ```
               wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh && chmod +x *.sh && ./update_install_ui.sh
              ```
+        - Remove all UI scripts, downloaded or pre-existing in the home folder, thate are not `update_install_ui.sh` or `uninstall_ui.sh`
 
 ## <strike>Important Details (2023) Mark-I (Deprecated) ℹ️
 
