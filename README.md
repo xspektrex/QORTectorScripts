@@ -15,7 +15,7 @@ The scripts herein are not be utilized on other Linux systems unless explicitly 
 ```
 ---
 
-## Newcomers Start Here
+## Newcomers Start Here 🆕
 
 1. Ensure `git` is installed via terminal with the command `git --version`
     - If no git version is listed simply install git via terminal with the command `sudo apt install git`
@@ -45,7 +45,7 @@ The scripts herein are not be utilized on other Linux systems unless explicitly 
 
 ---
 
-## Important Details (2023) Mark-II:
+## Important Details (2023) Mark-II ℹ️
 
 1. Since the nodesource nodejs install procedure has changed there are now 2 sets of scripts.
 
@@ -75,7 +75,7 @@ The scripts herein are not be utilized on other Linux systems unless explicitly 
               wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh && chmod +x *.sh && ./update_install_ui.sh
              ```
 
-## <strike>Important Details (2023) Mark-I (Deprecated):
+## <strike>Important Details (2023) Mark-I (Deprecated) ℹ️
 
 1. Since the qortal-ui repo has been restructured there are now 2 sets of scripts.
 
@@ -105,7 +105,7 @@ The scripts herein are not be utilized on other Linux systems unless explicitly 
 
 
     
-# Important Details (2022) (Deprecated):
+## Important Details (2022) (Deprecated) ℹ️
 
 1. Since the UI repo has changed from "UI" to "qortal-ui" there are now 2 sets of scripts.
 
