@@ -13,10 +13,13 @@ The scripts herein are not to be utilized on other Linux systems unless explicit
 </p>
 
 ---
+<br><br>
 ```
     The stated scripts are applicable to other Debian and Ubunutu based linux distros that are Qortal nodes only:
-      - unintall_ui.sh
+      - uninstall_ui.sh
       - update_install_ui.sh
+      - Launch_Core.sh
+      - Launch_UI.sh
 ```
 <br><br>
 ## Newcomers Start Here 🆕
