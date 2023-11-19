@@ -4,17 +4,21 @@
 </h1>
 
 <p>
-Simple scripts and how to's to make tasks easier for users of the QORTectors and home built pi4's and linux.
-The scripts herein are not be utilized on other Linux systems unless explicitly indicated in the list or images below this body of text.
+Simple scripts and how to's to make tasks easier for users of the QORTector and home built pi4's and linux.
+The scripts herein are not to be utilized on other Linux systems unless explicitly indicated in the OS image list below
+</p>
+<p align="center">
+<img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" />
+<img src="https://seeklogo.com/images/U/ubuntu-logo-7F6533BEF8-seeklogo.com.png" width="100" />
 </p>
 
+---
 ```
-    The stated scripts are applicable to other linux distros that are Qortal nodes only:
+    The stated scripts are applicable to other Debian and Ubunutu based linux distros that are Qortal nodes only:
       - unintall_ui.sh
       - update_install_ui.sh
 ```
----
-
+<br><br>
 ## Newcomers Start Here 🆕
 
 1. Ensure `git` is installed via terminal with the command `git --version`
@@ -44,7 +48,7 @@ The scripts herein are not be utilized on other Linux systems unless explicitly 
    ```
 
 ---
-
+<br><br>
 ## Important Details (2023) Mark-II ℹ️
 
 1. Since the nodesource nodejs install procedure has changed there are now 2 sets of scripts.
