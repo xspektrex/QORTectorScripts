@@ -26,30 +26,35 @@ The scripts herein are not to be utilized on other Linux systems unless explicit
 
 1. Ensure `git` is installed via terminal with the command `git --version`
     - If no git version is listed simply install git via terminal with the command `sudo apt install git`
+      
+<br>
 
-3. Download UI install/update and removal scripts to your home folder via terminal immediately after terminal load:
+2. Download UI install/update and removal scripts to your home folder via terminal immediately after terminal load:
 ```
      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh && wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
 ```
+<br>
 
 3. Download Qortal Core & Qortal-UI launchers to your home folder via terminal immediately after terminal load:
 ```
      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_Core.sh && wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_UI.sh
 ```
+<br>
 
 4. Make the downloaded script/s executable:
 
     - via terminal immediately after load with  `chmod +x *.sh`
 
     - Via GUI with  `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
+<br>
 
-6. Cut/paste Core & UI launchers to desktop
+5. Cut/paste Core & UI launchers to desktop
+<br>
 
-7. Now run the update_install or uninstall script/s via termianl immediately after load:
+6. Now run the update_install or uninstall script/s via termianl immediately after load:
    ```
    sudo ./<script name with file extension> eg: sudo ./install_update_ui.sh
    ```
-
 ---
 <br><br>
 ## Important Details (2023) Mark-II ℹ️
