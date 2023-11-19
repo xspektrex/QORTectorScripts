@@ -53,7 +53,7 @@ The scripts herein are not to be utilized on other Linux systems unless explicit
 
 6. Now run the update_install or uninstall script/s via termianl immediately after load:
    ```
-   sudo ./<script name with file extension> eg: sudo ./install_update_ui.sh
+   ./<script name with file extension> eg: sudo ./install_update_ui.sh
    ```
 ---
 <br><br>
