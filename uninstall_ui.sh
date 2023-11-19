@@ -88,7 +88,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     echo ""
 
     echo "${red}Removing${normal} NPM and NodeJS"
-    sudo apt purge nodejs
+    sudo apt purge -y nodejs
     sudo rm -rf /etc/apt/sources.list.d/nodesource.list
     sudo rm -rf /etc/apt/keyrings/nodesource.gpg
     echo ""
