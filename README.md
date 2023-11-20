@@ -4,7 +4,7 @@
 </h1>
 
 <p>
-Simple scripts and how to's to make tasks easier for users of the QORTector and home built pi4's and linux.
+Simple scripts and how to's to make tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's and linux.
 The scripts herein are not to be utilized on other Linux systems unless explicitly indicated in the OS image list below
 </p>
 <p align="center">
