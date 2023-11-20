@@ -1,6 +1,6 @@
 
 <h1 align="center">
-~ QORTector Scripts and how to's (Updated 11.19.23) ~
+~ HFactor's Scripts and How To's (Updated 11.19.23) ~
 </h1>
 
 <p>
@@ -8,8 +8,8 @@ Simple scripts and how to's to make tasks easier for users of the QORTector and 
 The scripts herein are not to be utilized on other Linux systems unless explicitly indicated in the OS image list below
 </p>
 <p align="center">
-<img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" />
-<img src="https://seeklogo.com/images/U/ubuntu-logo-7F6533BEF8-seeklogo.com.png" width="100" />
+<img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" alt="Debian Linux" />
+<img src="https://seeklogo.com/images/U/ubuntu-logo-7F6533BEF8-seeklogo.com.png" width="100" alt="Ubuntu Linux"/>
 </p>
 
 ---
