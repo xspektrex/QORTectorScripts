@@ -12,15 +12,9 @@ Simple scripts and how-to's to make tasks easier for users of the [QORTector](ht
 </p>
 
 ---
-<br><br>
-```
-    The stated scripts are applicable to other Debian/Ubunutu based linux distros that are Qortal nodes only:
-      - uninstall_ui.sh
-      - update_install_ui.sh
-      - Launch_Core.sh
-      - Launch_UI.sh
-```
-<br><br>
+
+<br>
+
 ## Newcomers Start Here 🆕
 
 1. Ensure `git` is installed via terminal with the command `git --version`
