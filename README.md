@@ -3,8 +3,7 @@
 ⚠️ ~ HFactor's Scripts and How-To's (Updated 11.19.23) ~ ⚠️
 </h1>
 
-Simple scripts and how-to's to make tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's.  
-The scripts herein are to only be utilized on the Linux systems visually indicated in the list below:
+Simple scripts and how-to's to make tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's.  The scripts herein should only be utilized on the Linux systems visually indicated in the list below:
 
 <p align="left">
 <img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" alt="Debian Linux" />
