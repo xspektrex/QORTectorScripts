@@ -4,7 +4,7 @@
 </h1>
 
 Simple scripts and how-to's to make tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's.  
-The scripts herein are not to be utilized on other Linux systems unless explicitly indicated in the OS image list below:
+The scripts herein are to only be utilized on the Linux systems visually indicated in the list below:
 
 <p align="center">
 <img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" alt="Debian Linux" />
