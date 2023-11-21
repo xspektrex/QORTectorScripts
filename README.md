@@ -2,7 +2,7 @@
 
 This repository contains scripts and how-to's making tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's taking part in the [QORTAL](https://www.qortal.org) blockchain.  The scripts herein make use of the [nodesource](https://nodesource.com/) git for installing and updating [Node.js](https://nodejs.org) utilized by the QORTAL UI. 
 
-**Please be advised the scripts herein should only be utilized in the distros pictured below**
+**Please be advised the scripts herein should only be utilized with the distros pictured below**
 <p align="left">
 <img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" alt="Debian Linux" />
 <img src="https://seeklogo.com/images/U/ubuntu-logo-7F6533BEF8-seeklogo.com.png" width="100" hspace="50" alt="Ubuntu Linux"/>
