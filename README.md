@@ -40,7 +40,7 @@ This repository contains scripts and how-to's making tasks easier for users of t
     - [UI Update Procedure](#returning-users-ui-update-procedure)
     - [UI UnInstall Procedure](#returning-users-ui-uninstall-procedure)
 * **[NodeJS Release Calendar](#nodejs-release-calendar)**
-* **[VPS QORTAL Setup Guide](https://github.com/xspektrex/QORTectorScripts/blob/master/QortalVPSinstall.md)**
+* **[VPS QORTAL Setup Guide](/QortalVPSinstall.md)**
 
 <br>
 
