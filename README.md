@@ -7,24 +7,28 @@ This repository contains scripts and how-to's making tasks easier for users of t
 **<p align="center">Please be advised the scripts herein should only be utilized with the distros pictured below</p>**
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/images/debian_logo_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="/images/debian_logo.png">
-    <img alt="Debian Linux" src="https://www.debian.org/" width="150" hspace="50" />
-  </picture>
-    <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/images/canonical_ubuntu_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="/images/canonical_ubuntu.png">
-    <img alt="Ubuntu Linux" src="https://ubuntu.com/" width="150" hspace="50" />
-  </picture>
-    <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/images/Raspberry_Pi_OS_Logo_Dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="/images/Raspberry_Pi_OS_Logo.png">
-    <img alt="Raspberry Pi OS" src="http://www.raspberrypi.com/" width="150" hspace="50" />
-  </picture>
+    <a href="https://www.debian.org/">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/images/debian_logo_dark.png">
+        <source media="(prefers-color-scheme: light)" srcset="/images/debian_logo.png">
+        <img alt="Debian Linux" src="/images/debian_logo.png" width="150" hspace="50" />
+      </picture>
+    </a>
+    <a href="https://ubuntu.com/">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/images/canonical_ubuntu_dark.png">
+        <source media="(prefers-color-scheme: light)" srcset="/images/canonical_ubuntu.png">
+        <img alt="Ubuntu Linux" src="/images/canonical_ubuntu.png" width="150" hspace="50" />
+      </picture>
+    </a>
+    <a href="https://www.raspberrypi.com/">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/images/Raspberry_Pi_OS_Logo_Dark.png">
+        <source media="(prefers-color-scheme: light)" srcset="/images/Raspberry_Pi_OS_Logo.png">
+        <img alt="Raspberry Pi OS" src="/images/Raspberry_Pi_OS_Logo.png" width="150" hspace="50" />
+      </picture>
+    </a>
 </p>
-
---- 
 
 <br>
 
