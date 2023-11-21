@@ -1,126 +1,128 @@
+## **<p align="center">🧑‍💻 ~ HFactor's Scripts and How-To's (Updated 11.19.23) ~ 🧑‍💻 </p>**
 
-<h1 align="center">
-⚠️ ~ HFactor's Scripts and How-To's ~ ⚠️
-    
-(Updated 11.19.23)
-</h1>
+This repository contains scripts and how-to's making tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's taking part in the [QORTAL](https://www.qortal.org) blockchain.  The scripts herein make use of the [nodesource](https://nodesource.com/) git for installing and updating [Node.js](https://nodejs.org) utilized by the QORTAL UI. 
 
-Simple scripts and how-to's to make tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's.  The scripts herein should only be utilized on the Linux systems visually indicated in the list below:
-
+**Please be advised the scripts herein should only be utilized in the distros pictured below**
 <p align="left">
 <img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" alt="Debian Linux" />
 <img src="https://seeklogo.com/images/U/ubuntu-logo-7F6533BEF8-seeklogo.com.png" width="100" hspace="50" alt="Ubuntu Linux"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Raspbian_logo.png" width="200" alt="Raspbian OS"/>
 </p>
 
----
-
 <br>
 
-## Newcomers Start Here 🆕
+## **<p align="center">⚠️ Important Updates ⚠️</p>**
 
-1. Ensure `git` is installed via terminal with the command `git --version`
-    - If no git version is listed simply install git via terminal with the command `sudo apt install git`
-      
-<br>
-
-2. Download UI install/update and removal scripts to your home folder via terminal immediately after terminal load:
-```
-     wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh && wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
-```
-<br>
-
-3. Download Qortal Core & Qortal-UI launchers to your home folder via terminal immediately after terminal load:
-```
-     wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_Core.sh && wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_UI.sh
-```
-<br>
-
-4. Make the downloaded script/s executable:
-
-    - via terminal immediately after load with  `chmod +x *.sh`
-
-    - Via GUI with  `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
-<br>
-
-5. Cut/paste Core & UI launchers to desktop
-<br>
-
-6. Now run the update_install or uninstall script/s via termianl immediately after load:
-   ```
-   ./<script name with file extension> eg: sudo ./install_update_ui.sh
-   ```
----
-<br><br>
-## Important Details (2023) Mark-II ℹ️
-
-1. Since the nodesource nodejs install procedure has changed there are now 2 sets of scripts.
-
-    ```
-       - Post 2023 mark-II repo change scripts prefixed with nothing
-       - Pre 2023 mark-II repo change scripts prefixed with "prc_njs_"
-    ```
-
-3.  Please utilize the appropriate procedural flow indicated below:
-    - If doing a fresh install (Preferred)
-        - Load terminal and ensure nodeJS is not already installed via APT, as it will not be a recent release, via the command below
-           ```
-               Sudo apt purge nodeJS
-           ```
-       - Load terminal and download/make executeable/run the `install_update_ui.sh` via the command below to install the qortal-ui via the updated method
-         ```
-              wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/install_update_ui.sh && chmod +x *.sh && ./install_update_ui.sh
-         ```
-      
-    - If updating for the first time since the scripts noted at the top of this page were updated (11.19.2023)
-        - Load terminal and download/make executeable/run the `prc_njs_2023_unintall_ui.sh` script via the command below to remove the existing qortal-ui install
-             ```
-              wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/prc_njs_2023_uninstall_ui.sh && chmod +x *.sh && ./prc_njs_2023_uninstall_ui.sh
-             ```
-        - Load terminal and download/make executebale/run the `update_install_ui.sh` script via the command below to install the qortal-ui via the updated method
-             ```
-              wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh && chmod +x *.sh && ./update_install_ui.sh
-             ```
-        - Remove all UI scripts, downloaded or pre-existing in the home folder, thate are not `update_install_ui.sh` or `uninstall_ui.sh`
-
-## <strike>Important Details (2023) Mark-I (Deprecated) ℹ️
-
-1. Since the qortal-ui repo has been restructured there are now 2 sets of scripts.
-
-```
-    - Post 2023 repo change scripts prefixed with nothing
-    - Pre 2023 repo change scripts prefixed with "prc2023"
-```
-
-2.  If a clean install is preferred, and it is suggested, the following procedural flow must be followed based on the indicated situation
-    - If doing a fresh install 
-        - Ensure nodeJS is not already installed via APT as it will not be a recent release
-           ```
-               Sudo apt purge nodeJS
-           ```
-      
-    - If updating for the first time since the repo re-orginization
-        - Ensure nodeJS is not already installed via APT as it will not be a recent release
-              ```
-                Sudo apt purge nodeJS
-              ```
-        - Run the `prc2023unintall_ui.sh` script to remove the qortal-ui install that was previously the normal installer
-        - Run the `update_install_ui.sh` script to install the qortal-ui
-        
-3. Finish up by re-installing curl
-   
-           sudo apt install curl 
-
-
+**(2023 Mark-II)**
+* Since the nodesource nodejs install procedure has changed there are now 2 sets of scripts.  
+  - Post 2023 mark-II repo change scripts prefixed with nothing  
+  - Pre 2023 mark-II repo change scripts prefixed with "prc_njs_
     
-## Important Details (2022) (Deprecated) ℹ️
-
-1. Since the UI repo has changed from "UI" to "qortal-ui" there are now 2 sets of scripts.
-
-```
-    - Pre repo change prefixed with "prc"
-    - Post repo change prefixed with nothing
-```
+<strike>**(2023 Mark-I)**
+* Since the qortal-ui repo has been restructured there are now 2 sets of scripts.
+  - Post 2023 repo change scripts prefixed with nothing
+  - Pre 2023 repo change scripts prefixed with "prc2023"
     
-2.  If a clean install is preferred, and it is suggested, the pre repo change uninstaller should be utilized before utilizing the post repo change installer.
+**(2022)**  
+* Since the UI repo has changed from "UI" to "qortal-ui" there are now 2 sets of scripts.
+  - Pre repo change prefixed with "prc"
+  - Post repo change prefixed with nothing</strike>
 
+<br>
+
+## Table Of Contents 
+
+* **[Build From Source UI Setup Guides](#build-from-source-ui-setup-guides)**
+  - [New Users](#new-users-ui-install-procedure)
+    - [UI Install Procedure](#new-users-ui-install-procedure)
+    - [UI UnInstall Procedure](#new-users-ui-uninstall-procedure)
+  - [Returning Users](#returning-users-ui-update-procedure)
+    - [UI Update Procedure](#returning-users-ui-update-procedure)
+    - [UI UnInstall Procedure](#returning-users-ui-uninstall-procedure)
+* **[NodeJS Release Calendar](#nodejs-release-calendar)**
+* **[VPS QORTAL Setup Guide](https://github.com/xspektrex/QORTectorScripts/blob/master/QortalVPSinstall.md)**
+
+<br>
+
+## <p align="center">Build From Source UI Setup Guides</p>
+
+### **New Users UI Install Procedure**
+
+1. Check to see if `git` is currently installed
+   * Load terminal and issue the command `git --version`
+     * If no git version is listed simply install git via the same terminal instance with the command `sudo apt install git`
+      
+3. Ensure 'nodejs' is not already installed
+   * Within terminal issue the command `sudo apt purge nodejs`
+
+4. Download UI install/update/removal scripts to your home folder
+   * Within terminal issue the following command:
+      ```shell
+      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh && wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/uninstall_ui.sh
+      ```
+
+5. Download Qortal Core & Qortal-UI launchers to your home folder
+   * Within terminal issue the following command:
+      ```shell
+      wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_Core.sh && wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/Launch_UI.sh
+      ```
+
+6. Make the downloaded script/s executable:
+    * Via terminal
+      * Within terminal issue the command `chmod +x *.sh`
+
+    * Via GUI
+      * `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
+
+7. Cut/paste Core & UI launchers to desktop
+   * Via terminal
+     * Within terminal issue the following command:
+         ```shell
+           mv Launch_Core.sh ~/Desktop/Launch_Core.sh && mv Launch_UI.sh ~/Desktop/Launch_UI.sh
+         ``` 
+   * Via GUI
+     * Select each file and cut/paste onto desktop 
+
+8. Run the QORTAL UI installation script by issuung the command `./install_update_ui.sh`
+
+9. Wait for installation script to complete it's work as noted by "press q to quit"
+    
+<br>
+
+### **New Users UI UnInstall Procedure**
+
+1. Load terminal and issue the command `./uninstall_ui.sh`
+
+<br>
+
+### **Returning Users UI Update Procedure**
+
+1. If step 2 below has been previously performed since the script/s update noted at the top of this page
+    - Load terminal and issue the command `./install_update_ui.sh`
+      
+2. If updating for the first time since the script/s update noted at the top of this page
+    - Load terminal and download/make executeable/run the pre-update uninstaller by issuing the following command:
+        ```shell
+            wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/prc_njs_2023_uninstall_ui.sh && chmod +x *.sh && ./prc_njs_2023_uninstall_ui.sh
+        ```
+    - Load terminal and download/make executebale/run the updated QORTAL UI installer via the command:
+        ```shell
+            wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/update_install_ui.sh && chmod +x *.sh && ./update_install_ui.sh
+        ```
+    - Remove all UI scripts, downloaded or pre-existing in the home folder, that are not `update_install_ui.sh` or `uninstall_ui.sh`
+
+<br>
+
+### **Returning Users UI Uninstall Procedure**
+1. If step 2 below has been previously performed since the script/s updated noted at the top of this page
+   - Load terminal and issue the command `./uninstall_ui.sh`
+2. If un-installing for the first time since the script/s updated noted at the top of this page
+    - Load terminal and download/make executeable/run the uninstaller by issuing the following command:
+        ```shell
+            wget https://raw.githubusercontent.com/xspektrex/QORTectorScripts/master/prc_njs_2023_uninstall_ui.sh && chmod +x *.sh && ./prc_njs_2023_uninstall_ui.sh
+        ```
+<br>
+
+## **<p align="center">NodeJS Release Calendar</p>**
+[![Node Releases Calendar](https://raw.githubusercontent.com/nodejs/Release/main/schedule.svg?sanitize=true)](https://nodejs.dev/en/about/releases)  
+_source: https://nodejs.dev_
