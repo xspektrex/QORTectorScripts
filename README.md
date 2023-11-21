@@ -2,12 +2,29 @@
 
 This repository contains scripts and how-to's making tasks easier for users of the [QORTector](https://test.crowetic.com/index.php/product/qortector-gen-2/) and home built pi4's taking part in the [QORTAL](https://www.qortal.org) blockchain.  The scripts herein make use of the [nodesource](https://nodesource.com/) git for installing and updating [Node.js](https://nodejs.org) utilized by the QORTAL UI. 
 
-**Please be advised the scripts herein should only be utilized with the distros pictured below**
-<p align="left">
-<img src="https://seeklogo.com/images/D/debian-logo-0BECE23D11-seeklogo.com.png" width="100" hspace="50" alt="Debian Linux" />
-<img src="https://seeklogo.com/images/U/ubuntu-logo-7F6533BEF8-seeklogo.com.png" width="100" hspace="50" alt="Ubuntu Linux"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Raspbian_logo.png" width="200" alt="Raspbian OS"/>
+<br>
+
+**<p align="center">Please be advised the scripts herein should only be utilized with the distros pictured below</p>**
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/images/debian_logo_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/images/debian_logo.png">
+    <img alt="Debian Linux" src="https://www.debian.org/" width="150" hspace="50" />
+  </picture>
+    <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/images/canonical_ubuntu_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/images/canonical_ubuntu.png">
+    <img alt="Ubuntu Linux" src="https://ubuntu.com/" width="150" hspace="50" />
+  </picture>
+    <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/images/Raspberry_Pi_OS_Logo_Dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/images/Raspberry_Pi_OS_Logo.png">
+    <img alt="Raspberry Pi OS" src="http://www.raspberrypi.com/" width="150" hspace="50" />
+  </picture>
 </p>
+
+--- 
 
 <br>
 
