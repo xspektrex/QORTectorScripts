@@ -4,7 +4,7 @@ This repository contains scripts and how-to's making tasks easier for users of t
 
 <br>
 
-**<p align="center">‼️ Please be advised the scripts herein should only be utilized with the distros, and any derivatives of, pictured below ‼️</p>**
+**<p align="center">‼️ Please be advised the scripts herein should only be utilized within the distros, or any derivative distros, shown below ‼️</p>**
 
 <p align="center">
     <a href="https://www.debian.org/">
