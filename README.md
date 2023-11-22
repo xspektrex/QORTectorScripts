@@ -39,12 +39,12 @@ This repository contains scripts and how-to's making tasks easier for users of t
   - Post 2023 mark-II repo change scripts prefixed with nothing  
   - Pre 2023 mark-II repo change scripts prefixed with "prc_njs_
     
-<strike>**(2023 Mark-I)**
+<strike>**(2023 Mark-I) - (Depracated)**
 * Since the qortal-ui repo has been restructured there are now 2 sets of scripts.
   - Post 2023 repo change scripts prefixed with nothing
   - Pre 2023 repo change scripts prefixed with "prc2023"
     
-**(2022)**  
+**(2022) - (Depracated)**  
 * Since the UI repo has changed from "UI" to "qortal-ui" there are now 2 sets of scripts.
   - Pre repo change prefixed with "prc"
   - Post repo change prefixed with nothing</strike>
