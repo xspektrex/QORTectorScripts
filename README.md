@@ -93,7 +93,7 @@ This repository contains scripts and how-to's making tasks easier for users of t
       * Within terminal issue the command `chmod +x *.sh`
 
     * Via GUI
-      * `(Right-click -> Properties -> Permissions)` and check the "make executable" box.
+      * `(Right-click -> Properties -> Permissions)` and check the "Allow executing file as program" box.
 
 7. Cut/paste Core & UI launchers to desktop
    * Via terminal
