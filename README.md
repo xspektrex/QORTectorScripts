@@ -135,7 +135,7 @@ This repository contains scripts and how-to's making tasks easier for users of t
 <br>
 
 ### **Returning Users UI Uninstall Procedure**
-1. If step 2 below has been previously performed since the script/s updated noted at the top of this page
+1. If step 2 below has been previously performed since the script/s update noted at the top of this page
    - Load terminal and issue the command `./uninstall_ui.sh`
 2. If un-installing for the first time since the script/s updated noted at the top of this page
     - Load terminal and download/make executeable/run the uninstaller by issuing the following command:
