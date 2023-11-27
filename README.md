@@ -54,7 +54,7 @@ This repository contains scripts and how-to's making tasks easier for users of t
 ## Table Of Contents 
 
 * **[Build From Source UI Setup Guides](#build-from-source-ui-setup-guides)**
-  - [New Users](#new-users-ui-install-procedure)
+  - [New Users -or- Fresh Installs](#new-users-ui-install-procedure)
     - [UI Install Procedure](#new-users-ui-install-procedure)
     - [UI UnInstall Procedure](#new-users-ui-uninstall-procedure)
   - [Returning Users](#returning-users-ui-update-procedure)
