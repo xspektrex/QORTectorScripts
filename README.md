@@ -104,7 +104,7 @@ This repository contains scripts and how-to's making tasks easier for users of t
    * Via GUI
      * Select each file and cut/paste onto desktop 
 
-8. Run the QORTAL UI installation script by issuung the command `./install_update_ui.sh`
+8. Run the QORTAL UI installation script by issuing the command `./install_update_ui.sh`
 
 9. Wait for installation script to complete it's work as noted by "press q to quit"
     
