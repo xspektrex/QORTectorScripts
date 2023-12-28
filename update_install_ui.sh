@@ -87,7 +87,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     echo "Downloading and importing the Nodesource GPG key..."
     sleep 2
     sudo apt-get install -y ca-certificates curl gnupg
-    sudo mkdir -p /etc/apt/keyrings
+    echo N | sudo mkdir -p /etc/apt/keyrings
     curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
     echo ""
     sleep 2
