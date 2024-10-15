@@ -77,6 +77,11 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     echo ""
     sleep 2
 
+    echo "${green}Installing${normal} git if not already installed..."
+    sudo apt install git -y
+    echo ""
+    sleep 2
+
     echo "${red}Stopping${normal} node.js if running...ID10T preventive..."
     sudo killall -9 node*
     echo ""
