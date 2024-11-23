@@ -43,6 +43,9 @@ _user=$(id -un)
 # Variable to store user defined restart interval
 _timeInterval=$2
 
+# Variable to store validation of user input
+_timeIntervalValidated="false"
+
 # Variable to store location of curl if installed
 _curlPath=$(which curl)
 
@@ -120,7 +123,24 @@ it_listens2 () {
             (*) echo && echo -n "${red}Invalid unit of time chosen please retry! :${normal}";;
         esac
     done
+
     echo
+}
+
+# Function to validate user input for time interval via regex
+# User should not be able to continue if user only entered s,m,h,d
+time_interval_validator () {
+
+    if [[ "${_timeInterval}" =~ [0-9]+[smhd]{1} ]]; then  
+        _timeIntervalValidated="true";
+    else
+        echo "Invalid restart interval '${red}${_timeInterval}${normal}' was keyed; please try again!"
+        logging "Invalid restart interval ${_timeInterval} was keyed; please try again!\\n"
+        
+        # Set time interval to nothing as we failed validation
+        _timeInterval="";
+        echo
+    fi
 }
 
 # Function to check for curl installation
@@ -184,8 +204,15 @@ core_processid_check () {
 # Protection against the run.pid being deleted or manipulated after start script
 processid_validation () {
     
-    if [[ "${_runFileText}" != "${_runProcText}" ]]; then
-        _runFileText="${_runProcText}"
+    if [[ "${_timeInterval}" =~ [0-9]+[smhd]{1} ]]; then  
+        _timeIntervalValidated="true";
+    else
+        echo "Invalid restart interval '${red}${_timeInterval}${normal}' was keyed; please try again!"
+        logging "Invalid restart interval ${_timeInterval} was keyed; please try again!\\n"
+        
+        # Set time interval to nothing as we failed validation
+        _timeInterval="";
+        echo
     fi
 }
 
@@ -573,11 +600,20 @@ if [[ "${_useScreen}" != "yes" ]]; then
                 fi
             fi
             
-        # Request users desired restart interval, store in variable and display
-        echo -n "Enter interval between Qortal ${cyan}core${normal} restarts (e.g. 60s/60m/1h/1d): "
-        it_listens2
-        logging "Enter interval between Qortal core restarts (e.g. 60s/60m/1h/1d): ${_timeInterval}"
-        sleep .5
+        while [[ "${_timeIntervalValidated}" != "true" ]]; do
+            # Request users desired restart interval, store in variable and display
+            echo -n "Enter interval between Qortal ${cyan}core${normal} restarts (e.g. 60s/60m/1h/1d): "
+            
+            # Call function to read and store user input for time interval
+            it_listens2
+
+            # Write to log must occur after function to obtain user input interval
+            logging "Enter interval between Qortal core restarts (e.g. 60s/60m/1h/1d): ${_timeInterval}"
+
+            # Call function to validate user input for time interval
+            time_interval_validator
+            sleep .5
+        done
 
         echo "${green}Core restart interval keyed as every ${_timeInterval}${normal} !"
         logging "Core restart interval keyed as every ${_timeInterval}\\n"
