@@ -130,9 +130,9 @@ curl_check () {
 	_curlPath=$(which curl)
 
 	if [[ -f "${_curlPath}" ]]; then
-	return 0
+		return 0
 	else
-	return 1
+		return 1
 	fi
 }
 
@@ -143,9 +143,9 @@ screen_check () {
 	_screenPath=$(which screen)
 
 	if [[ -f "${_screenPath}" ]]; then
-	return 0
+		return 0
 	else
-	return 1
+		return 1
 	fi
 }
 
