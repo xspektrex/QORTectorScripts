@@ -126,6 +126,9 @@ it_listens2 () {
 # Function to check for curl installation
 curl_check () {
 
+  # Check curl installation path again if installed by script
+  _curlPath=$(which curl)
+
   if [[ -f "${_curlPath}" ]]; then
     return 0
   else
@@ -135,6 +138,9 @@ curl_check () {
 
 # Function to check for screen installation
 screen_check () {
+
+  # Check screen installation path again if installed by script
+  _screenPath=$(which screen)
 
   if [[ -f "${_screenPath}" ]]; then
     return 0
