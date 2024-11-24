@@ -120,7 +120,7 @@ it_listens2 () {
             (m) break ;;
             (h) break ;;
             (d) break ;;
-            (*) echo && echo -n "${red}Invalid unit of time chosen please retry! :${normal}";;
+            (*) echo ; echo -n "${red}Invalid unit of time chosen please retry! :${normal}";;
         esac
     done
 
@@ -615,7 +615,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
             sleep .5
         done
 
-        echo "${green}Core restart interval keyed as every ${_timeInterval}${normal} !"
+        echo "${green}Core restart interval keyed as every ${_timeInterval}${normal}"
         logging "Core restart interval keyed as every ${_timeInterval}\\n"
         sleep .5
         echo
