@@ -46,18 +46,6 @@ _timeInterval=$2
 # Variable to store validation of user input
 _timeIntervalValidated="false"
 
-# Variable to store location of resize if installed
-_resizePath=$(which resize)
-
-# Variable to store location of lsof if installed
-_lsofPath=$(which lsof)
-
-# Variable to store location of curl if installed
-_curlPath=$(which curl)
-
-# Variable to store location of screen if installed
-_screenPath=$(which screen)
-
 # Variable to store screen app utilization
 _useScreen=$1
 
@@ -153,8 +141,9 @@ time_interval_validator () {
 # Generally not available on container instances by default
 resize_check () {
 
-    if [[ -f ${_resizePath} ]]; then
+    if [[ -f "$(which resize)" ]]; then
         resize -s 24 88
+        echo "resize found"
     fi
 }
 
@@ -567,8 +556,8 @@ if [[ "${_useScreen}" != "yes" ]]; then
         # Call function to determine if lsof is installed
         echo "Checking if ${cyan}lsof${normal} is installed..."
         logging "Checking if lsof is installed..."
-        lsof_check
         sleep 1
+        lsof_check
 
         # Install lsof if not already installed based on function return value
         if [[ $? -eq 0 ]]; then
