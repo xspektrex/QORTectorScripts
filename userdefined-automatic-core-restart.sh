@@ -570,7 +570,6 @@ if [[ "${_useScreen}" != "yes" ]]; then
             logging "Lsof installation not detected, beginning install!"
             sleep 1
             sudo apt install -y lsof
-            sleep .5
             
             # Check for lsof install again and prompt user
             lsof_check
