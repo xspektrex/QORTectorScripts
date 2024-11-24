@@ -491,13 +491,15 @@ sigterm_stop_core () {
 # Function to exit core restart script
 we_outtie () {
 
-    echo "Qortal ${cyan}core${normal} auto-restart script will now exit..."
-    logging "Qortal core auto-restart script will now exit..."
-    sleep .5
-    echo "${cyan}Goodbye!${normal}"
-    logging "Goodbye!\\n"
-    sleep .5
-    
+    if [[ "${_useScreen}" != "yes" ]]; then
+        echo "Qortal ${cyan}core${normal} auto-restart script will now exit..."
+        logging "Qortal core auto-restart script will now exit..."
+        sleep .5
+        echo "${cyan}Goodbye!${normal}"
+        logging "Goodbye!\\n"
+        sleep .5
+    fi
+
     #re-enable mouse cursor
 	tput cnorm
     
@@ -566,6 +568,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
         echo "Checking if ${cyan}lsof${normal} is installed..."
         logging "Checking if lsof is installed..."
         lsof_check
+        sleep 1
 
         # Install lsof if not already installed based on function return value
         if [[ $? -eq 0 ]]; then
@@ -576,6 +579,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
         else
             echo "${red}Lsof installation not detected, beginning install!${normal}"
             logging "Lsof installation not detected, beginning install!"
+            sleep 1
             sudo apt install -y lsof
             sleep .5
             
@@ -598,6 +602,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
         # Call function to determine if curl is installed
         echo "Checking if ${cyan}curl${normal} is installed..."
         logging "Checking if curl is installed..."
+        sleep 1
         curl_check
 
         # Install curl if not already installed based on function return value
@@ -609,6 +614,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
         else
             echo "${red}Curl installation not detected, beginning install!${normal}"
             logging "Curl installation not detected, beginning install!"
+            sleep 1
             sudo apt install -y curl
             sleep .5
             
@@ -631,6 +637,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
         # Call function to determine if screen is installed
         echo "Checking if ${cyan}screen${normal} is installed..."
         logging "Checking if screen is installed..."
+        sleep 1
         screen_check
 
             # Install screen if not already installed based on function return value
@@ -643,6 +650,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
             else
                 echo "${red}Screen installation not detected, beginning install!${normal}"
                 logging "Screen installation not detected, beginning install!"
+                sleep 1
                 sudo apt install -y screen
                 sleep .5
                 
