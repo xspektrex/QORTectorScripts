@@ -569,18 +569,22 @@ if [[ "${_useScreen}" != "yes" ]]; then
             echo "${red}Lsof installation not detected, beginning install!${normal}"
             logging "Lsof installation not detected, beginning install!"
             sleep 1
-            sudo apt install -y lsof
+            sudo apt install -y lsof &> lsof_install.txt
             
             # Check for lsof install again and prompt user
             lsof_check
             if [[ $? -eq 0 ]]; then
                 echo "${green}Lsof installation completed, moving forward!${normal}"
                 logging "Lsof installation completed, moving forward!\\n"
-            else
-                echo "${red}Lsof failed to install and is required to move forward!${normal}"
-                logging "Lsof failed to install and is required to move forward!\\n"
                 sleep 1
                 echo
+            else
+                    echo "${red}Lsof failed to install and is required to move forward!${normal}"
+                    logging "Lsof failed to install and is required to move forward!"
+                    sleep .5
+                    echo "${yellow}Please check 'lsof_install.txt' for screen install output!${normal}"
+                    logging "Please check 'lsof_install.txt' for screen install output!\\n"
+                    sleep 1
                 
                 # Exit under general error so user can determine issue/s and correct
                 we_outtie 1
@@ -603,7 +607,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
             echo "${red}Curl installation not detected, beginning install!${normal}"
             logging "Curl installation not detected, beginning install!"
             sleep 1
-            sudo apt install -y curl
+            sudo apt install -y curl &> curl_install.txt
             sleep .5
             
             # Check for curl install again and prompt user
@@ -611,11 +615,15 @@ if [[ "${_useScreen}" != "yes" ]]; then
             if [[ $? -eq 0 ]]; then
                 echo "${green}Curl installation completed, moving forward!${normal}"
                 logging "Curl installation completed, moving forward!\\n"
-            else
-                echo "${red}Curl failed to install and is required to move forward!${normal}"
-                logging "Curl failed to install and is required to move forward!\\n"
                 sleep 1
                 echo
+            else
+                    echo "${red}curl failed to install and is required to move forward!${normal}"
+                    logging "curl failed to install and is required to move forward!"
+                    sleep .5
+                    echo "${yellow}Please check 'curl_install.txt' for screen install output!${normal}"
+                    logging "Please check 'curl_install.txt' for screen install output!\\n"
+                    sleep 1
                 
                 # Exit under general error so user can determine issue/s and correct
                 we_outtie 1
@@ -639,7 +647,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
                 echo "${red}Screen installation not detected, beginning install!${normal}"
                 logging "Screen installation not detected, beginning install!"
                 sleep 1
-                sudo apt install -y screen
+                sudo apt install -y screen &> screen_install.txt
                 sleep .5
                 
                 # Check for screen install again and prompt user
@@ -647,10 +655,16 @@ if [[ "${_useScreen}" != "yes" ]]; then
                 if [[ $? -eq 0 ]]; then
                     echo "${green}Screen installation completed, moving forward!${normal}"
                     logging "Screen installation completed, moving forward!\\n"
+                    sleep 1
+                    echo
                 else
                     echo "${red}Screen failed to install and is required to move forward!${normal}"
-                    logging "Screen failed to install and is required to move forward!\\n"
+                    logging "Screen failed to install and is required to move forward!"
+                    sleep .5
+                    echo "${yellow}Please check 'screen_install.txt' for screen install output!${normal}"
+                    logging "Please check 'screen_install.txt' for screen install output!\\n"
                     sleep 1
+                    
                     echo
                     
                     # Exit under general errorso user can determine issue/s and correct
