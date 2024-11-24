@@ -49,6 +49,9 @@ _timeIntervalValidated="false"
 # Variable to store location of resize if installed
 _resizePath=$(which resize)
 
+# Variable to store location of lsof if installed
+_lsofPath=$(which lsof)
+
 # Variable to store location of curl if installed
 _curlPath=$(which curl)
 
@@ -152,6 +155,20 @@ resize_check () {
 
     if [[ -f ${_resizePath} ]]; then
         resize -s 24 88
+    fi
+}
+
+# Function to check if lsof is installed for port checks
+# Generally not available on container instances by default
+lsof_check () {
+
+    # Check lsof installation path again if installed by script
+	_lsofPath=$(which lsof)
+
+    if [[ -f "${_lsofPath}" ]]; then
+        return 0
+    else    
+        return 1
     fi
 }
 
@@ -544,6 +561,39 @@ if [[ "${_useScreen}" != "yes" ]]; then
 	    logging "Root user login not detected!\\n"
 	    sleep 1
 	    echo
+
+        # Call function to determine if lsof is installed
+        echo "Checking if ${cyan}lsof${normal} is installed..."
+        logging "Checking if lsof is installed..."
+        lsof_check
+
+        # Install lsof if not already installed based on function return value
+        if [[ $? -eq 0 ]]; then
+            echo "${green}Lsof installation detected, moving forward!${normal}"
+            logging "Lsof installation detected, moving forward!\\n"
+            sleep .5
+            echo
+        else
+            echo "${red}Lsof installation not detected, beginning install!${normal}"
+            logging "Lsof installation not detected, beginning install!"
+            sudo apt install -y lsof
+            sleep .5
+            
+            # Check for lsof install again and prompt user
+            lsof_check
+            if [[ $? -eq 0 ]]; then
+                echo "${green}Lsof installation completed, moving forward!${normal}"
+                logging "Lsof installation completed, moving forward!\\n"
+            else
+                echo "${red}Lsof failed to install and is required to move forward!${normal}"
+                logging "Lsof failed to install and is required to move forward!\\n"
+                sleep 1
+                echo
+                
+                # Exit under general error so user can determine issue/s and correct
+                we_outtie 1
+            fi
+        fi
 
         # Call function to determine if curl is installed
         echo "Checking if ${cyan}curl${normal} is installed..."
