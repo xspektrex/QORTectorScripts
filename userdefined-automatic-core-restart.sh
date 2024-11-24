@@ -50,7 +50,9 @@ _timeIntervalValidated="false"
 _useScreen=$1
 
 # Variable to store location of restart script log file
-_restartLog="${_core}/userdefined-automatic-core-restart.log"
+# determined by parameter expansion
+_tmpLog=${0%.*}
+_restartLog="${_tmpLog##*/}.log"
 
 # ====== Function declarations Begin ======
 #
@@ -87,7 +89,7 @@ color_check () {
 # as it won't show correctly in a file
 logging() {
 
-    echo -e "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "${_restartLog}" 2>&1
+    echo -e "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "${_restartLog}"
 }
 
 # Function to listen for and store user requested input
@@ -311,7 +313,8 @@ core_file_cleanup () {
             sleep .5
         fi
         
-        echo "" >> "${_core}/${0##*/}.log"
+        # Insert space in log file after core shutdown and cleanup
+        echo "" >> "${_core}/${_restartLog}"
 }
 
 # Function to load the core and write processID to file
