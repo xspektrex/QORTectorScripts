@@ -46,6 +46,9 @@ _timeInterval=$2
 # Variable to store validation of user input
 _timeIntervalValidated="false"
 
+# Variable to store location of resize if installed
+_resizePath=$(which resize)
+
 # Variable to store location of curl if installed
 _curlPath=$(which curl)
 
@@ -140,6 +143,15 @@ time_interval_validator () {
         # Set time interval to nothing as we failed validation
         _timeInterval="";
         echo
+    fi
+}
+
+# Function to resize terminal window if xterm resize installed
+# Generally not available on container instances by default
+resize_check () {
+
+    if [[ -f ${_resizePath} ]]; then
+        resize -s 24 88
     fi
 }
 
@@ -490,8 +502,8 @@ we_outtie () {
 # Call function to set user console colors
 color_check
 
-# Set terminal size to support greeting
-resize -s 24 88
+# Call function to set terminal size to support greeting
+resize_check
 
 # If not running screen session we need user input
 if [[ "${_useScreen}" != "yes" ]]; then
