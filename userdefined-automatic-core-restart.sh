@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Disable mouse cursor for user input
+tput civis
+
 # Variable to store core directory
 cd ~/qortal
 _core="$(pwd)"
@@ -96,18 +99,28 @@ logging() {
 # E.g. yes (y) or no (n)
 it_listens () {
     
+    # Enable mouse cursor for user input
+    tput cnorm
+
     while read -n 1 input; do
         case "${input}" in
             (y) echo; _useScreen="yes"; break;;
             (n) echo; _useScreen="no"; break;;
-            (*) echo -n "${red}Invalid answer chosen please retry! :${normal}";;
+            (*) echo -n "${red}Invalid answer chosen please retry!: ${normal}";;
         esac
     done
+
+    # Disable mouse cursor for user input
+    tput civis
 }
 
 # Function to listen for and store user requested input
 # E.g. 60s or 1m or 1h or 1d etc...
 it_listens2 () {   
+
+    #Enable mouse cursor for user input
+    tput cnorm
+
     while read -r -N 1 input; do
         _timeInterval+="${input}"
         case "${input}" in
@@ -116,9 +129,12 @@ it_listens2 () {
             (m) break ;;
             (h) break ;;
             (d) break ;;
-            (*) echo ; echo -n "${red}Invalid unit of time chosen please retry! :${normal}";;
+            (*) echo ; echo -n "${red}Invalid unit of time chosen please retry!: ${normal}";;
         esac
     done
+
+    # Disable mouse cursor for user input
+    tput civis
 
     echo
 }
@@ -492,17 +508,17 @@ we_outtie () {
         sleep .5
     fi
 
-    #re-enable mouse cursor
+    # Enable mouse cursor
 	tput cnorm
     
 	if [[ $1 -eq 0 ]]; then
-		# exit under status 0 (no errors)
+		# Exit under status 0 (no errors)
 		exit 0
 	elif [[ $1 -eq 1 ]]; then
-		# exit under status 1 (errors)
+		# Exit under status 1 (errors)
 		exit 1
 	else
-		# exit under status 0 (no errors)
+		# Exit under status 0 (no errors)
 		exit 0
 	fi
 }
@@ -547,7 +563,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
 	    sleep 1
 	    echo
 	    
-	    # exit under general error
+	    # Exit under general error
 	    we_outtie 1
 
     elif [ "$_user" != "root" ]; then
@@ -569,10 +585,16 @@ if [[ "${_useScreen}" != "yes" ]]; then
             sleep .5
             echo
         else
+            # Enable mouse cursor for user input
+            tput cnorm
+
             echo "${red}Lsof installation not detected, beginning install!${normal}"
             logging "Lsof installation not detected, beginning install!"
             sleep 1
             sudo apt install -y lsof &> lsof_install.txt
+
+            # Disable mouse cursor for user input
+            tput civis
             
             # Check for lsof install again and prompt user
             lsof_check
@@ -607,11 +629,18 @@ if [[ "${_useScreen}" != "yes" ]]; then
             sleep .5
             echo
         else
+
+            # Enable mouse cursor for user input
+            tput cnorm
+
             echo "${red}Curl installation not detected, beginning install!${normal}"
             logging "Curl installation not detected, beginning install!"
             sleep 1
             sudo apt install -y curl &> curl_install.txt
             sleep .5
+
+            # Disable mouse cursor for user input
+            tput civis
             
             # Check for curl install again and prompt user
             curl_check
@@ -647,11 +676,18 @@ if [[ "${_useScreen}" != "yes" ]]; then
                 echo
                 
             else
+
+                # Enable mouse cursor for user input
+                tput cnorm
+
                 echo "${red}Screen installation not detected, beginning install!${normal}"
                 logging "Screen installation not detected, beginning install!"
                 sleep 1
                 sudo apt install -y screen &> screen_install.txt
                 sleep .5
+
+                # Disable mouse cursor for user input
+                tput civis
                 
                 # Check for screen install again and prompt user
                 screen_check
@@ -674,7 +710,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
                     we_outtie 1
                 fi
             fi
-            
+
         while [[ "${_timeIntervalValidated}" != "true" ]]; do
             # Request users desired restart interval, store in variable and display
             echo -n "Enter interval between Qortal ${cyan}core${normal} restarts (e.g. 60s/60m/1h/1d): "
@@ -743,9 +779,6 @@ if [[ "${_useScreen}" != "yes" ]]; then
         fi
         
         echo
-
-        # disable mouse cursor for user input
-        tput civis
     fi
 fi
 
@@ -824,4 +857,9 @@ while true; do
     echo
     
 done
+
+#Enable mouse cursor
+tput cnorm
+
+# Exit under status 0 (no errors)
 exit 0
