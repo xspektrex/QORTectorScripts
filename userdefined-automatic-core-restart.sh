@@ -237,19 +237,23 @@ core_processid_check () {
 }
 
 # Function to check the process status processID against the run.pid processID
+# If not equal then processId takes precidence and is pushed into variable _runFileText
 # Protection against the run.pid being deleted or manipulated after start script
-processid_validation () {
-    
-    if [[ "${_timeInterval}" =~ [0-9]+[smhd]{1} ]]; then  
-        _timeIntervalValidated="true";
-    else
-        echo "Invalid restart interval '${red}${_timeInterval}${normal}' was keyed; please try again!"
-        logging "Invalid restart interval ${_timeInterval} was keyed; please try again!\\n"
+processid_validation () { 
         
-        # Set time interval to nothing as we failed validation
-        _timeInterval="";
-        echo
-    fi
+    # If run.pid exists and isn't empty
+    if [[ -f "${_runFileExists}" && -n "${_runFileText}" ]]; then
+    
+        # If run.pid value not equal to java processID value then update run.pid
+        if [[ "${_runFileText}" -ne "${_runProcText}" ]]; then  
+                    
+            # Clear run.pid file (ID10T preventive)
+            echo "" > "${_runFileLoc}"
+            
+            # Save java processID to run.pid (overwrites)
+            echo "${_runProcText}" > "${_runFileLoc}"
+        fi
+    fi  
 }
 
 # Function to check for the existence of the apikey.txt file and read it
@@ -401,8 +405,8 @@ api_stop_core () {
     apikey_check
     
     if [[ $(curl -s --url "http://localhost:"${_apiPort}"/admin/stop?apiKey=${_apiFileText}") = "true" ]]; then
-	    echo "${green}Qortal core responded to shutdown request on processID "${_runFileText}"${normal}"
-	    logging "Qortal core responded to shutdown request on processID ${_runfileText}"
+	    echo "${green}Qortal core responded to shutdown request on procID "${_runFileText}"${normal}"
+	    logging "Qortal core responded to shutdown request on procID ${_runFileText}"
 	    echo
 	    printf ${yellow}"Monitoring for Qortal core to shutdown, please wait${normal}"
 	    logging "Monitoring for Qortal core to shutdown, please wait..."
@@ -424,7 +428,7 @@ api_stop_core () {
                        	    
 	    # If core still running api shutdown was a failure
 	    # Else api call was success
-	    if [[ ! -z ${_runProcText} ]]; then
+	    if [[ "${_coreRunning}" == "false" ]]; then
 		    echo "${red}Qortal core failed to be gracefully shutdown by api call!${normal}"
 		    logging "Qortal core failed to be gracefully shutdown by api call!"
 		    sleep .5
@@ -741,7 +745,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
         # If user chose to utilize screen app
         if [[ "${_useScreen}" = "yes" ]]; then           
             
-        # Run screen detached mode (-d) and ignore $STY env. variable (-m) with asessionname(-S) of
+        # Run screen detached mode (-d) and ignore $STY env. variable (-m) with a sessionname(-S) of
         # "qortalRestart" and run command (bash -c) "$(realpath $0), which is the absolute path to
         # this script, and pass this script the argument "true" to be picked up by the script via $1
         screen -d -m -S coreAutoRestart bash -c "$(realpath $0) "yes" "$_timeInterval" "
@@ -811,15 +815,15 @@ while true; do
     sleep .5
 
     # If Core not already running
-    if [[ -z "${_runFileText}" ]]; then
+    if [[ "${_coreRunning}" == "false" ]]; then
         echo "${green}Running instance of Qortal core not detected!${normal}"
         logging "Running instance of Qortal core not detected!"
         sleep .5
         echo
     # Else if Core already running prompt user and stop it
-    elif [[ ! -z "${_runFileText}" ]]; then 
-        echo "${yellow}Running instance of Qortal core detected under pid "${_runFileText}"${normal}"
-        logging "Running instance of Qortal core detected under pid ${_runFileText}"
+    elif [[ "${_coreRunning}" == "true" ]]; then 
+        echo "${yellow}Running instance of Qortal core detected under procID "${_runFileText}"${normal}"
+        logging "Running instance of Qortal core detected under procID ${_runFileText}"
         sleep .5
         echo
         
@@ -840,8 +844,8 @@ while true; do
         lets_start_loop
         echo
 
-    echo "${green}Qortal core is now running under pid "${_runProcText}"${normal}"
-    logging "Qortal core is now running under pid ${_runProcText}\\n"
+    echo "${green}Qortal core is now running under procID "${_runProcText}"${normal}"
+    logging "Qortal core is now running under procID ${_runProcText}\\n"
     sleep .5
     echo
     
