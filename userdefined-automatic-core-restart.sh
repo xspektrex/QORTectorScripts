@@ -129,7 +129,7 @@ it_listens2 () {
             (m) break ;;
             (h) break ;;
             (d) break ;;
-            (*) echo ; _timeInterval=""; echo -n "${red}Invalid unit of time chosen please retry!: ${normal}";;
+            (*) echo ; echo -n "${red}Invalid unit of time chosen please retry!: ${normal}";;
         esac
     done
 

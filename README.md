@@ -148,8 +148,3 @@ This repository contains scripts and how-to's making tasks easier for users of t
 ## **<p align="center">NodeJS Release Calendar</p>**
 [![Node Releases Calendar](https://raw.githubusercontent.com/nodejs/Release/main/schedule.svg?sanitize=true)](https://nodejs.dev/en/about/releases)  
 _source: https://nodejs.dev_
-
-## License (WTFPL)
-Released under [WTFPL](https://www.wtfpl.net)  
-![WTFPL Badge](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png) <br>
-Local Redundant Copies are at [COPYING](COPYING) and [LICENSE](LICENSE)  
