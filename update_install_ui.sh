@@ -58,7 +58,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
 
     # Small intro and declaration of versioning
     echo "==========================================================================="
-    echo "        Qortal-UI update/install script for Linux by ${cyan}HFactor${normal} (V4.1)        "
+    echo "        Qortal-UI update/install script for Linux by ${cyan}HFactor${normal} (V4.0)        "
     echo "==========================================================================="
     echo ""
     sleep 2
@@ -83,7 +83,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     sleep 2
 
     echo "${red}Stopping${normal} node.js if running...ID10T preventive..."
-    sudo killall -9 node
+    sudo killall -9 node*
     echo ""
     sleep 2
 
@@ -99,7 +99,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
 
     echo "Creating deb repository..."
     sleep 1
-    NODE_MAJOR=23
+    NODE_MAJOR=20
     echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
     echo ""
     sleep 2
@@ -109,7 +109,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
 	echo ""
 	sleep 2
 
-    echo "Installing node.js via apt..."
+    echo "Updating APT repository since nodesource has been added..."
     sudo apt install -y nodejs
     echo ""
     sleep 2
