@@ -289,26 +289,38 @@ lets_stop_loop () {
     # Implement integer variable that can be incremented
     declare -i _ticker=0
     
-    # While api port is still active loop for max 30s until it is not
-	while lsof -nP -u "${_user}" -iTCP:"${_apiPort}" -sTCP:LISTEN -a -t 1>/dev/null 2>&1; do
+    # While api port is still active loop for max 30s until it is not    1>/dev/null 2>&1
+	while [ -n $( lsof -nP -u ${_user} -iTCP:${_apiPort} -sTCP:LISTEN -a -t ) ]; 
+	do
 		if [[ ${_ticker} -ne 60 ]]; then
 		    (( _ticker+=1 ))
 		    printf "${yellow}.${normal}"
 		    sleep .5
-	    else
-	        _apiReachable="true"
-	        return 1
+	    fi
+	    # If the api is no longer detected the core has shutdown
+	    if [[ -z $( lsof -nP -u ${_user} -iTCP:${_apiPort} -sTCP:LISTEN -a -t ) ]]; then
+            _apiReachable="false"
+            break
+        else
+            _apiReachable="true"
 	    fi
 	done
 	
-	_apiReachable="false"
+	_ticker=0
 	
 	# Check for core process to complete shutdown as it's not instant
-	while pgrep -U "${_user}" -n "${_service}" 1>/dev/null 2>&1; do
+	while [[ -n $( pgrep -U ${_user} -n ${_service} ) ]]; do
 		if [[ ${_ticker} -ne 60 ]]; then
 	        (( _ticker+=1 ))
 	        printf "${yellow}.${normal}"
 	        sleep .5
+	    fi
+	    # If the core processID is longer detected the core has shutdown
+	    if [[ -n $( pgrep -U ${_user} -n ${_service} ) ]] ; then
+	        _coreRunning="false"
+	        break
+	    else
+	        _coreRunning="true"
 	    fi
 	done
 }
@@ -404,7 +416,7 @@ api_stop_core () {
     # it's value into a variable
     apikey_check
     
-    if [[ $(curl -s --url "http://localhost:"${_apiPort}"/admin/stop?apiKey=${_apiFileText}") = "true" ]]; then
+    if [[ $(curl -s --url "http://localhost:"${_apiPort}"/admin/stop?apiKey=${_apiFileText}") == "true" ]]; then
 	    echo "${green}Qortal core responded to shutdown request on procID "${_runFileText}"${normal}"
 	    logging "Qortal core responded to shutdown request on procID ${_runFileText}"
 	    echo
@@ -544,7 +556,7 @@ if [[ "${_useScreen}" != "yes" ]]; then
 
     # Small intro and declaration of versioning
     echo =======================================================================================        
-    echo "                Linux ${cyan}Qortal${normal} core auto-restart script by ${cyan}HFactor${normal} (V1.0)"
+    echo "                Linux ${cyan}Qortal${normal} core auto-restart script by ${cyan}HFactor${normal} (V1.1)"
     echo
     echo " This script will make use of the 'screen' app to spawn another session to run in."
     echo " The following commands should be used to stop any screen session/s before the core."
