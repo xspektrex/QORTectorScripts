@@ -62,7 +62,7 @@ elif [ "$_user" != "root" ] && [ "$SUDO_USER" = "" ]; then
     echo "==========================================================================="
     echo ""
     sleep 2
-    echo "This script will build the Qortal-UI from soruce and will require ${red}sudo${normal}"
+    echo "This script will uninstall the Qortal-UI and may require ${red}sudo${normal}"
     echo "privileges for one or more calls before script completion..."
     sleep 3
     echo "Please enter the appropriate password when asked to ${red}avoid${normal} permissions errors!"
